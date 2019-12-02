@@ -6,12 +6,14 @@
       <div class="table-responsive">
         <table class="table text-center">
             <h4 class="header-title">Data Pending</h4>
+            <a href="#tambah" data-toggle="modal"><span class="glyphicon glyphicon-plus ">Tambah + </span></a><br>
           <thead class="text-uppercase bg-secondary">
             <tr class="text-white">
               <th scope="col">No</th>
               <th scope="col">Kode Transaksi</th>
               <th scope="col">Nama Pelanggan</th>
               <th scope="col">Alamat</th>
+              <th scope="col">Tanggal</th>
               <th scope="col">Total</th>
               <th scope="col">Status</th>
               <th scope="col">Aksi</th>
@@ -27,6 +29,7 @@
                   <td>'.$dt_bar->id_transaksi.'</td>
                   <td>'.$dt_bar->nama_user.'</td>
                   <td>'.$dt_bar->alamat.'</td>
+                  <td>'.$dt_bar->tanggal_pesan.'</td>
                   <td>'.$dt_bar->total_bayar.'</td>
                   <td><a href="#" data-toggle="modal" onclick="prepare_ubah_user('.$dt_bar->id_transaksi.')" data-target="#update" >'.$dt_bar->status_pesan.'</a></td>
                    <td><a href="'.base_url('index.php/order/hapus_order/'.$dt_bar->id_transaksi).'" onclick="return confirm(\'anda yakin?\')" >Delete</a></td>
@@ -42,6 +45,44 @@
 </div>
 </div>
 <!-- add user -->
+
+<div class="modal fade" id="tambah">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="myModalLabel">Tambah Transaksi</h4>
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        </div>
+        <div class="modal-body">
+          <form action="<?php echo base_url() ?>index.php/order/add" method="post" enctype="multipart/form-data">
+          <input type="hidden" name="id_transksi" ><br>
+          Total
+          <input id="total_bayar" type="text" name="total_bayar" class="form-control" placeholder="Total Bayar"><br>
+          Pilih Pelanggan <br>
+              <select name="id_pelanggan" class="form-control" id="id_pelanggan">
+                <?php
+                foreach($data_pelanggan as $d) {
+                  echo "<option value='".$d->id_level."'>".$d->nama_user."</option>";
+                }
+                ?></select>
+          <br>
+          <input type="submit" name="simpan" value="Simpan" class="btn btn-success">
+          <input type="button" value="Cancel" class="btn btn-defaul" data-dismiss="modal">
+          </form>
+          </div>
+                </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+            <!-- /.box-body -->
+          </div>
+            <!-- <div> -->
+          <!-- /.box -->
+        </div><br>
+      <?php if($this->session->flashdata('pesan')!=null): ?>
+           <div class= "alert alert-success"><?= $this->session->flashdata('pesan');?></div>
+        <?php endif?>
 <!-- Update Kategori -->
 <div class="modal fade" id="update">
 <div class="modal-dialog">

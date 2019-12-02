@@ -19,14 +19,37 @@ class order extends CI_Controller
     $data['arr']=$this->order_model->get_order();
     $this->load->model('order_model');
     $data['data_status']=$this->order_model->get_status();
+    $this->load->model('order_model');
+    $data['data_pelanggan']=$this->order_model->get_pelanggan();
     $this->load->view('template', $data, FALSE);
   }
+
   public function hapus_order($id_transaksi)
 {
   $this->load->model('order_model');
   $this->order_model->hapus_order($id_transaksi);
   redirect(base_url('index.php/order'), 'refresh');
 }
+
+  public function add(){
+    $this->form_validation->set_rules('id_pelanggan', 'Pelanggan', 'trim|required');
+    $this->form_validation->set_rules('total_bayar', 'Total Bayar', 'trim|required|numeric');
+
+
+          if ($this->form_validation->run() == TRUE ){
+            if ($this->order_model->update() == TRUE ){
+            $this->session->set_flashdata('pesan', 'sukses update');
+            redirect(base_url('index.php/order'), 'refresh');
+          } else{
+
+              $this->session->set_flashdata('pesan', 'sukses update');
+                redirect(base_url('index.php/order'), 'refresh');
+            }
+          }else {
+              $this->session->set_flashdata('pesan', validation_errors());
+              redirect(base_url('index.php/order'), 'refresh');
+            }
+  }
 
   public function update(){
     $this->form_validation->set_rules('ubah_id_status', 'Status', 'trim|required');

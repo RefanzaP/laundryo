@@ -39,7 +39,7 @@
             <div class="sidebar-header">
                 <div class="logo">
 
-                    <a href="index.html"><img src="<?php echo base_url();?>assetsd/assets/images/icon/logolaund.png" alt="logo"></a>
+                    <a href="<?php echo base_url()?>index.php/dashboard"><img src="<?php echo base_url();?>assetsd/assets/images/icon/logolaund.png" alt="logo"></a>
                 </div>
             </div>
             <div class="main-menu">
@@ -107,7 +107,11 @@
                                         <ul class="collapse">
                                       <li><a href="<?php echo base_url();?>index.php/order" aria-expanded="true"><span>Order Pending</span></a>
                                         </li>
+                                        <li><a href="<?php echo base_url();?>index.php/order_diterima" aria-expanded="true"><span>Order Diterima</span></a>
+                                          </li>
                                         <li><a href="<?php echo base_url();?>index.php/order_dikerjakan" aria-expanded="true"><span>Order Dikerjakan</span></a>
+                                          </li>
+                                          <li><a href="<?php echo base_url();?>index.php/order_dikirim" aria-expanded="true"><span>Order Dikirim</span></a>
                                           </li>
                                         <li><a href="<?php echo base_url();?>index.php/order_selesai" aria-expanded="true"><span>Order Selesai</span></a>
                                           </li>

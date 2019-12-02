@@ -20,6 +20,11 @@ class order_model extends CI_Model
     return $query;
   }
 
+  public function get_pelanggan(){
+    $query = $this->db->get('pelanggan')->result();
+    return $query;
+  }
+
   public function hapus_order($id_transaksi = '')
   {
     $this->db->where('id_transaksi', $id_transaksi);
@@ -46,6 +51,18 @@ class order_model extends CI_Model
                     ->row();
   }
 
+  public function add(){
+      $now = date("Y-m-d H:i:s");
+    $data_topik=array(
+        'tanggal_pesan' => $now,
+        'id_user' => $_SESSION['id_user'],
+        'total_bayar' => $this->input->post('total_bayar'),
+        'id_pelanggan' => $this->input->post('id_pelanggan'),
+        'id_status_t' => '4',
+    );
+  $ql_masuk=$this->db->insert('transaksi', $data_topik);
+  return $ql_masuk;
+  }
 
 }
 
