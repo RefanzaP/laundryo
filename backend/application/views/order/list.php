@@ -21,7 +21,7 @@
           </thead>
           <tbody>
             <?php
-      $no=0;
+      $no=$offset;
       foreach ($arr as $dt_bar) {
           $no++;
           echo '<tr>
@@ -38,6 +38,7 @@
       ?>
           </tbody>
         </table>
+          <?php echo $halaman ?>
       </div>
     </div>
   </div>
@@ -58,8 +59,8 @@
           <input type="hidden" name="id_transaksi" ><br>
           Jumlah
           <input id="qty" type="text" name="qty" class="form-control" placeholder="jumlah"><br>
-          Pilih Pelanggan <br>
-              <select name="id_pelanggan" class="form-control" ">
+          Pilih pelanggan <br>
+              <select name="id_pelanggan" class="form-control" >
                 <?php
                 foreach($data_pelanggan as $d) {
                   echo "<option value='".$d->id_pelanggan."'>".$d->nama_user."</option>";

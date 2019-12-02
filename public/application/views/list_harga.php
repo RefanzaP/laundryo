@@ -5,7 +5,7 @@
 	<title>Go Laundry Laundry Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
-	<meta name="keywords" content="Go Laundry Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	<meta name="keywords" content="Go Laundry Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
 SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 	<script>
 		addEventListener("load", function () {
@@ -20,7 +20,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 	<!-- Bootstrap Core CSS -->
 	<link href="<?=base_url()?>assets/css/bootstrap.css" rel='stylesheet' type='text/css' />
 	<!-- gallery css -->
-	
+
 	<!-- Custom CSS -->
 	<link href="<?=base_url()?>assets/css/style.css" rel='stylesheet' type='text/css' />
 	<!-- font-awesome icons -->
@@ -31,7 +31,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 	    rel="stylesheet">
 	<!--//webfonts-->
 	<!--tabel-->
-	<!--===============================================================================================-->	
+	<!--===============================================================================================-->
 	<link rel="icon" type="image/png" href="<?=base_url()?>assets2/images/icons/favicon.ico"/>
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="<?=base_url()?>assets2/vendor/bootstrap/css/bootstrap.min.css">
@@ -56,9 +56,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<nav class="navbar navbar-expand-lg navbar-light">
 				<a class="navbar-brand" href="index.html">
-				
+
 					<img src="<?=base_url()?>assets/images/logo.png" width="80" heigth="80">
-					
+
 				</a>
 				<button class="navbar-toggler ml-md-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
 				    aria-expanded="false" aria-label="Toggle navigation">
@@ -68,7 +68,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav mx-auto text-center">
 						<li class="nav-item active  mr-3">
-							<a class="nav-link" href="<?=base_url()?>index.php/dashboard">Home 
+							<a class="nav-link" href="<?=base_url()?>index.php/dashboard">Home
 								<span class="sr-only">(current)</span>
 							</a>
 						</li>
@@ -113,14 +113,14 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 			<h3 class="w3ls-title text-center text-capitalize pb-md-10 pb-8">List Harga Laundry Satuan</h3>
 			<br><br>
 			<div class="agileits-services-row row">
-				
-			
+
+
 			<div class="wrap-table100">
 					<div class="table">
-						
+
 						<div class="row header">
 							<div class="cell">
-								Jenis Pakaian 
+								Jenis Pakaian
 							</div>
 							<div class="cell">
 								Harga Reguler
@@ -279,7 +279,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 		<script src="<?=base_url()?>assets/js/jquery-2.2.3.min.js"></script>
 	<!-- js-->
 	<!--js tabel-->
-	<!--===============================================================================================-->	
+	<!--===============================================================================================-->
 	<script src="<?=base_url()?>assets2/vendor/jquery/jquery-3.2.1.min.js"></script>
 	<!--===============================================================================================-->
 	<script src="<?=base_url()?>assets2/vendor/bootstrap/js/popper.js"></script>
@@ -336,7 +336,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				 containerID: 'toTop', // fading element id
 				 containerHoverID: 'toTopHover', // fading element hover id
 				 scrollSpeed: 1200,
-				 easingType: 'linear' 
+				 easingType: 'linear'
 			 };
 			 */
 

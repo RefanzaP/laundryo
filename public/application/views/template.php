@@ -5,7 +5,7 @@
 	<title>Laundry-O</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
-	<meta name="keywords" content="Go Laundry Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	<meta name="keywords" content="Go Laundry Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
 SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 	<script>
 		addEventListener("load", function () {
@@ -38,9 +38,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<nav class="navbar navbar-expand-lg navbar-light">
 				<a class="navbar-brand" href="index.html">
-				
-					<img src="<?=base_url()?>assets/images/logo.png" width="80" heigth="80" href="<?=base_url()?>"> 
-					
+
+					<img src="<?=base_url()?>assets/images/logo.png" width="80" heigth="80" href="<?=base_url()?>">
+
 				</a>
 				<button class="navbar-toggler ml-md-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
 				    aria-expanded="false" aria-label="Toggle navigation">
@@ -50,14 +50,14 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav mx-auto text-center">
 						<li class="nav-item active  mr-3">
-							<a class="nav-link" href="<?=base_url()?>index.php/dashboard">Home 
+							<a class="nav-link" href="<?=base_url()?>index.php/dashboard">Home
 								<span class="sr-only">(current)</span>
 							</a>
 						</li>
 						<li class="nav-item  mr-3">
 							<a class="nav-link scroll" href="#about">about</a>
 						</li>
-						<li class="nav-item dropdown mr-3">
+						<!-- <li class="nav-item dropdown mr-3">
 							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
 							    aria-expanded="false">
 								Dropdown
@@ -71,13 +71,27 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 								<a class="dropdown-item" href="<?=base_url()?>index.php/harga">List Harga</a>
 								<a class="dropdown-item scroll" href="#testimonials">Testimonials</a>
 							</div>
-						</li>
+						</li> -->
 						<li class="nav-item">
 							<a class="nav-link scroll" href="#contact">contact</a>
 						</li>
+						<?php if(!empty($_SESSION['username'])){ ?>
+									<li class="nav-item dropdown mr-3">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+									aria-expanded="false">
+								Hi! <?php echo $this->session->userdata('username');?>
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="" href="<?php echo base_url('index.php/logout');?>">Logout</a>
+								<div class="dropdown-divider"></div>
+								<a class="" href="#team">Transaksi Saya</a>
+							</li>
+							 <!-- <a class="nav-link scroll" aria-pressed="false" > Hi! <?php echo $this->session->userdata('username');?> </a> -->
+					<?php } else {?>
 						<li class="nav-item">
-							<a class="nav-link scroll" href="#" data-toggle="modal"  aria-pressed="false" data-target="#loginModal">Sign</a>
+							<a class="nav-link scroll" href="#" data-toggle="modal"  aria-pressed="false" data-target="#loginModal">Sign in</a>
 						</li>
+					<?php }?>
 					</ul>
 					<button type="button" class="btn btn-info btn-lg-block w3ls-btn px-4 text-uppercase font-weight-bold" data-toggle="modal"
 					    aria-pressed="false" data-target="#exampleModal">
@@ -127,10 +141,10 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				<h1 class="ab-title my-5">About Us</h1>
 				<h2 class="lead">We Promise Highest Quality Care</h2>
 				<hr class="my-4">
-				<p>Laundry-O adalah jasa laundry yang paling tepat untuk laundry pakaian sehari-hari, baik itu kaos, 
-					celana, kaos kaki, dll. Harganya juga sangat terjangkau, laundry-O menggunakan deterjen ramah lingkungan, 
-					proses pencucian 1 Mesin 1 Pelanggan (tidak dicampur dengan pelanggan lain) sehingga pakaian anda akan 
-					terjaga kebersihannya, tidak akan bau apek. Kami tidak melakukan proses jemur manual, kami menggunakan mesin 
+				<p>Laundry-O adalah jasa laundry yang paling tepat untuk laundry pakaian sehari-hari, baik itu kaos,
+					celana, kaos kaki, dll. Harganya juga sangat terjangkau, laundry-O menggunakan deterjen ramah lingkungan,
+					proses pencucian 1 Mesin 1 Pelanggan (tidak dicampur dengan pelanggan lain) sehingga pakaian anda akan
+					terjaga kebersihannya, tidak akan bau apek. Kami tidak melakukan proses jemur manual, kami menggunakan mesin
 					pengering modern untuk memberikan hasil terbaik untuk laundry kiloan yang kami kerjakan.</p>
 				<p class="lead">
 					<a class="btn btn-primary btn-lg mt-3 scroll" href="#services" role="button">Learn more</a>
@@ -601,17 +615,17 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				<!-- contact details -->
 				<!-- contact map grid -->
 				<div class="col-lg-6  mt-lg-0 mt-5 map contact-right">
-					<iframe class="h-50" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.9503398796587!2d-73.9940307!3d40.719109700000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a27e2f24131%3A0x64ffc98d24069f02!2sCANADA!5e0!3m2!1sen!2sin!4v1441710758555"
+					<iframe class="h-50" src="https://maps.google.com/maps?q=smk%20telkom%20malang&t=&z=17&ie=UTF8&iwloc=&output=embed"
 					    allowfullscreen></iframe>
 					<div class="address mt-3">
 						<h5 class="pb-3 text-capitalize">Contact info</h5>
 						<address>
-							<p class="c-txt">90 Street, City, State 34789.</p>
+							<p class="c-txt">Jl. Danau Ranau, Sawojajar, Kec. Kedungkandang, Kota Malang, Jawa Timur 65139</p>
 							<p>
-								+10 234 5678</p>
+								+62 (0341) 712500</p>
 							<p>
 								<p>
-									<a href="mailto:info@example.com">mail@golaundry.com</a>
+									<a href="mailto:info@example.com">smktelkom@sch.id</a>
 								</p>
 						</address>
 					</div>
@@ -698,14 +712,14 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					</button>
 				</div>
 				<div class="modal-body">
-					<form action="#" method="post" class="p-3">
+					<form action="<?php echo base_url() ?>index.php/login/proses" method="post" class="p-3">
 						<div class="form-group">
 							<label for="recipient-name" class="col-form-label">Username</label>
-							<input type="text" class="form-control" placeholder=" " name="Name" id="recipient-name" required="">
+							<input type="text" class="form-control" placeholder=" " name="username" id="username" required="">
 						</div>
 						<div class="form-group">
 							<label for="recipient-name1" class="col-form-label">Password</label>
-							<input type="password" class="form-control" placeholder=" " name="Name" id="recipient-name1" required="">
+							<input type="password" class="form-control" placeholder=" " name="password" id="password" required="">
 						</div>
 
 						<div class="right-w3l">
@@ -730,29 +744,32 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					</button>
 				</div>
 				<div class="modal-body">
-					<form action="#" method="post" class="p-3">
+					<form action="<?php echo base_url() ?>index.php/register/add" method="post" class="p-3">
 						<div class="form-group">
 							<label for="recipient-name" class="col-form-label">Name</label>
-							<input type="text" class="form-control" placeholder=" " name="Name" id="recipient-name" required="">
+							<input type="text" class="form-control" placeholder=" " name="nama_user" id="nama_user" required="">
 						</div>
 						<div class="form-group">
 							<label for="recipient-name" class="col-form-label">Telephone</label>
-							<input type="telephone" class="form-control" placeholder=" " name="Name" id="recipient-name" required="">
+							<input type="telephone" class="form-control" placeholder=" " name="telepon" id="telepon" required="">
 						</div>
 						<div class="form-group">
 							<label for="recipient-name" class="col-form-label">Username</label>
-							<input type="text" class="form-control" placeholder=" " name="Name" id="recipient-name" required="">
+							<input type="text" class="form-control" placeholder=" " name="username" id="username" required="">
 						</div>
 						<div class="form-group">
 							<label for="recipient-name1" class="col-form-label">Password</label>
-							<input type="password" class="form-control" placeholder=" " name="Name" id="recipient-name1" required="">
+							<input type="password" class="form-control" placeholder=" " name="password" id="password" required="">
 						</div>
-
+						<div class="form-group">
+							<label for="recipient-name" class="col-form-label">Address</label>
+							<input type="text" class="form-control" placeholder=" " name="alamat" id="alamat" required="">
+						</div>
 						<div class="right-w3l">
 							<input type="submit" class="form-control" value="sign up">
 						</div>
 					</form>
-					
+
 				</div>
 			</div>
 		</div>
@@ -857,7 +874,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				 containerID: 'toTop', // fading element id
 				 containerHoverID: 'toTopHover', // fading element hover id
 				 scrollSpeed: 1200,
-				 easingType: 'linear' 
+				 easingType: 'linear'
 			 };
 			 */
 

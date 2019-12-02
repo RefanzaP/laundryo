@@ -20,6 +20,7 @@ class login_model extends CI_Model
       if ($this->db->affected_rows() > 0) {
         $data_login = $query->row();
         $data_session = array(
+                          'id_user' =>$data_login->id_user,
                           'username' => $data_login->username,
                           'id_level' =>$data_login->id_level,
                           'logged_in' => TRUE

@@ -25,6 +25,13 @@ class order_model extends CI_Model
     return $query;
   }
 
+  function ambil_data($perpage,$offset)
+    {
+
+      return $this->db->get('transaksi', $perpage,$offset)->result();
+
+    }
+
   public function hapus_order($id_transaksi = '')
   {
     $this->db->where('id_transaksi', $id_transaksi);

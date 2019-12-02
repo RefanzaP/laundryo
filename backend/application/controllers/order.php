@@ -14,7 +14,7 @@ class order extends CI_Controller
     $this->load->model('order_model');
   }
 
-  public function index(){
+  public function index($offset=0){
     $data['content_view']="order/list";
     $this->load->model('order_model');
     $data['arr']=$this->order_model->get_order();
@@ -22,6 +22,34 @@ class order extends CI_Controller
     $data['data_status']=$this->order_model->get_status();
     $this->load->model('order_model');
     $data['data_pelanggan']=$this->order_model->get_pelanggan();
+
+
+		    $data_post = $this->db->get('transaksi');
+        $config['total_rows'] = $data_post->num_rows();
+        $config['base_url']= base_url(). 'index.php/order/index';
+        $config['per_page']=5;
+
+        // Konfigurasi Boostrap
+        $config['full_tag_open']="<ul class='pagination pagination-sm' style='position:relative; top:-25px'>";
+        $config['full_tag_close']="</ul>";
+        $config['num_tag_open']="<li>";
+        $config['num_tag_close']="</li>";
+        $config['cur_tag_open']="<li class='disabled'><li class='active'><a href='#'>";
+        $config['cur_tag_close']="<span class='sr-only'></span></a></li>";
+        $config['next_tag_open']="<li>";
+        $config['next_tag_close']="</li>";
+        $config['prev_tag_open']="<li>";
+        $config['prev_tag_close']="</li>";
+        $config['first_tag_open']="<li>";
+        $config['first_tag_close']="</li>";
+        $config['last_tag_open']="<li>";
+        $config['last_tag_close']="</li>";
+
+        $this->pagination->initialize($config);
+        $data['halaman']=$this->pagination->create_links();
+        $data['offset']=$offset;
+        $data['data'] = $this->order_model->ambil_data($config['per_page'],$data['offset']);
+
     $this->load->view('template', $data, FALSE);
   }
 
