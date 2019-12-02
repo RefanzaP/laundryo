@@ -20,7 +20,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 	<!-- Bootstrap Core CSS -->
 	<link href="<?=base_url()?>assets/css/bootstrap.css" rel='stylesheet' type='text/css' />
 	<!-- gallery css -->
-	<link rel="stylesheet" href="<?=base_url()?>assets/css/swipebox.css">
+	
 	<!-- Custom CSS -->
 	<link href="<?=base_url()?>assets/css/style.css" rel='stylesheet' type='text/css' />
 	<!-- font-awesome icons -->
@@ -56,7 +56,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<nav class="navbar navbar-expand-lg navbar-light">
 				<a class="navbar-brand" href="index.html">
-					<i class="fab fa-empire"></i>
+				
+					<img src="<?=base_url()?>assets/images/logo.png" width="80" heigth="80">
+					
 				</a>
 				<button class="navbar-toggler ml-md-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
 				    aria-expanded="false" aria-label="Toggle navigation">
@@ -66,7 +68,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav mx-auto text-center">
 						<li class="nav-item active  mr-3">
-							<a class="nav-link" href="index.html">Home
+							<a class="nav-link" href="<?=base_url()?>index.php/dashboard">Home 
 								<span class="sr-only">(current)</span>
 							</a>
 						</li>
@@ -108,147 +110,100 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 	<!--services-->
 	<div class="agileits-services py-md-7 py-5" id="services">
 		<div class="container">
-			<h3 class="w3ls-title text-center text-capitalize pb-md-10 pb-8">List Harga</h3>
-			<div class="agileits-services-row row py-md-7 pb-7">
-			<div class="limiter">
+			<h3 class="w3ls-title text-center text-capitalize pb-md-10 pb-8">List Harga Laundry Satuan</h3>
+			<br><br>
+			<div class="agileits-services-row row">
+				
+			
 			<div class="wrap-table100">
 					<div class="table">
-
+						
 						<div class="row header">
 							<div class="cell">
-								Full Name
+								Jenis Pakaian 
 							</div>
 							<div class="cell">
-								Age
+								Harga Reguler
 							</div>
 							<div class="cell">
-								Job Title
-							</div>
-							<div class="cell">
-								Location
+								Harga Express
 							</div>
 						</div>
 
 						<div class="row">
 							<div class="cell" data-title="Full Name">
-								Vincent Williamson
+								Jeans
 							</div>
 							<div class="cell" data-title="Age">
-								31
+								5000
 							</div>
 							<div class="cell" data-title="Job Title">
-								iOS Developer
-							</div>
-							<div class="cell" data-title="Location">
-								Washington
+								8000
 							</div>
 						</div>
 
 						<div class="row">
 							<div class="cell" data-title="Full Name">
-								Joseph Smith
+								Non Jeans
 							</div>
 							<div class="cell" data-title="Age">
-								27
+								5000
 							</div>
 							<div class="cell" data-title="Job Title">
-								Project Manager
-							</div>
-							<div class="cell" data-title="Location">
-								Somerville, MA
+								8000
 							</div>
 						</div>
 
 						<div class="row">
 							<div class="cell" data-title="Full Name">
-								Justin Black
+								Selimut
 							</div>
 							<div class="cell" data-title="Age">
-								26
+								5000
 							</div>
 							<div class="cell" data-title="Job Title">
-								Front-End Developer
-							</div>
-							<div class="cell" data-title="Location">
-								Los Angeles
+								8000
 							</div>
 						</div>
 
 						<div class="row">
 							<div class="cell" data-title="Full Name">
-								Sean Guzman
+								Sprei
 							</div>
 							<div class="cell" data-title="Age">
-								25
+								5000
 							</div>
 							<div class="cell" data-title="Job Title">
-								Web Designer
-							</div>
-							<div class="cell" data-title="Location">
-								San Francisco
+								8000
 							</div>
 						</div>
 
-						<div class="row">
-							<div class="cell" data-title="Full Name">
-								Keith Carter
-							</div>
-							<div class="cell" data-title="Age">
-								20
-							</div>
-							<div class="cell" data-title="Job Title">
-								Graphic Designer
-							</div>
-							<div class="cell" data-title="Location">
-								New York, NY
-							</div>
-						</div>
 
 						<div class="row">
 							<div class="cell" data-title="Full Name">
-								Austin Medina
+								Handuk
 							</div>
 							<div class="cell" data-title="Age">
-								32
+								5000
 							</div>
 							<div class="cell" data-title="Job Title">
-								Photographer
-							</div>
-							<div class="cell" data-title="Location">
-								New York
+								8000
 							</div>
 						</div>
 
-						<div class="row">
-							<div class="cell" data-title="Full Name">
-								Vincent Williamson
-							</div>
-							<div class="cell" data-title="Age">
-								31
-							</div>
-							<div class="cell" data-title="Job Title">
-								iOS Developer
-							</div>
-							<div class="cell" data-title="Location">
-								Washington
-							</div>
-						</div>
 
 						<div class="row">
 							<div class="cell" data-title="Full Name">
-								Joseph Smith
+								Boneka
 							</div>
 							<div class="cell" data-title="Age">
-								27
+								5000
 							</div>
 							<div class="cell" data-title="Job Title">
-								Project Manager
+								8000
 							</div>
-							<div class="cell" data-title="Location">
-								Somerville, MA
-							</div>
-						
-					</div>
+						</div>
+
 			</div>
 		</div>
 	</div>

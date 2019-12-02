@@ -2,7 +2,7 @@
 <html lang="zxx">
 
 <head>
-	<title>Go Laundry Laundry Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+	<title>Laundry-O</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
 	<meta name="keywords" content="Go Laundry Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -38,7 +38,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<nav class="navbar navbar-expand-lg navbar-light">
 				<a class="navbar-brand" href="index.html">
-					<i class="fab fa-empire"></i>
+				
+					<img src="<?=base_url()?>assets/images/logo.png" width="80" heigth="80" href="<?=base_url()?>"> 
+					
 				</a>
 				<button class="navbar-toggler ml-md-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
 				    aria-expanded="false" aria-label="Toggle navigation">
@@ -48,7 +50,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav mx-auto text-center">
 						<li class="nav-item active  mr-3">
-							<a class="nav-link" href="index.html">Home
+							<a class="nav-link" href="<?=base_url()?>index.php/dashboard">Home 
 								<span class="sr-only">(current)</span>
 							</a>
 						</li>
@@ -86,7 +88,6 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 			</nav>
 		</div>
 	</header>
-	<!-- //header -->
 	<!-- banner -->
 	<div class="banner" id="home">
 		<div class="container">
@@ -121,13 +122,16 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 	<section class="about-w3ls" id="about">
 		<div class="container">
 			<div class="jumbotron text-center pt-0">
-				<img src="<?=base_url()?>assets/images/about.jpg" alt="" class="img-fluid rounded-circle">
-				<h1 class="ab-title my-5">We Promise Highest Quality Care</h1>
-				<h2 class="lead">Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci. Nulla accumsan
-					ac elit in congue.</h2>
+				<img src="<?=base_url()?>assets/images/.jpg" alt="" class="img-fluid rounded-circle">
+				<br><br><br><br>
+				<h1 class="ab-title my-5">About Us</h1>
+				<h2 class="lead">We Promise Highest Quality Care</h2>
 				<hr class="my-4">
-				<p>rerum hic tenetur a sapiente delectus reiciendis maiores alias consequatur aut consequat sapien ut leo cursus rhoncus.
-					Nullam dui mi, vulputate ac metus .</p>
+				<p>Laundry-O adalah jasa laundry yang paling tepat untuk laundry pakaian sehari-hari, baik itu kaos, 
+					celana, kaos kaki, dll. Harganya juga sangat terjangkau, laundry-O menggunakan deterjen ramah lingkungan, 
+					proses pencucian 1 Mesin 1 Pelanggan (tidak dicampur dengan pelanggan lain) sehingga pakaian anda akan 
+					terjaga kebersihannya, tidak akan bau apek. Kami tidak melakukan proses jemur manual, kami menggunakan mesin 
+					pengering modern untuk memberikan hasil terbaik untuk laundry kiloan yang kami kerjakan.</p>
 				<p class="lead">
 					<a class="btn btn-primary btn-lg mt-3 scroll" href="#services" role="button">Learn more</a>
 				</p>
@@ -355,7 +359,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				<div class="col-4 gal-w3l">
 					<div class="agileits-img">
 						<a href="<?=base_url()?>assets/images/g1.jpg" class="swipebox" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus tortor diam, ac lobortis justo rutrum quis. Praesent non purus fermentum, eleifend velit non">
-							<img class="img-responsive img-style row2" src="<?=base_url()?>assets/images/g1.jpg" alt="" />
+							<img class="img-responsive img-style row2" src="<?=base_url()?>assets/images/f1.jpg" alt="" />
 						</a>
 					</div>
 				</div>
@@ -415,7 +419,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				<div class="col-4  gal-w3l">
 					<div class="agileits-img">
 						<a href="<?=base_url()?>assets/images/g9.jpg" class="swipebox" title="Duis maximus tortor diam, ac lobortis justo rutrum quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non purus fermentum, eleifend velit non">
-							<img src="<?=base_url()?>assets/images/g9.jpg" alt="" class="img-responsive img-style row2" />
+							<img src="<?=base_url()?>assets/images/f9.jpg" alt="" class="img-responsive img-style row2" />
 						</a>
 					</div>
 				</div>
@@ -768,48 +772,30 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				<div class="modal-body">
 					<form action="#" method="post" class="p-3">
 						<div class="form-group">
-							<label for="recipient-name" class="col-form-label">Your Name</label>
-							<input type="text" class="form-control" placeholder=" " name="Name" id="recipient-name" required="">
+							<label for="recipient-name" class="col-form-label">Jenis Pakaian</label>
+							<select type="text" class="form-control" placeholder=" " name="Name" id="recipient-name" required="">
+								<option value="">Jeans</option>
+								<option value="">Non Jeans</option>
+								<option value="">Selimut</option>
+								<option value="">Sprei</option>
+								<option value="">Handuk</option>
+								<option value="">Boneka</option>
+							</select>
 						</div>
 						<div class="form-group">
-							<label for="recipient-name1" class="col-form-label">Your Email</label>
-							<input type="email" class="form-control" placeholder=" " name="Name" id="recipient-name1" required="">
+						<label for="recipient-name" class="col-form-label">Jenis Paket</label>
+							<select type="text" class="form-control" placeholder=" " name="Name" id="recipient-name" required="">
+								<option value="">Reguler</option>
+								<option value="">Express</option>
+							</select>
 						</div>
 						<div class="form-group">
-							<label for="recipient-name2" class="col-form-label">Phone</label>
-							<input type="text" class="form-control" placeholder=" " name="Name" id="recipient-name2" required="">
-						</div>
-						<div class="form-group">
-							<label class="mr-2 col-form-label">Pick Up</label>
-							<input id="datepicker1" name="check in" type="text" value="mm/dd/yyyy" class="form-control" required="">
+							<label class="mr-2 col-form-label">Jumlah</label>
+							<input type="number" class="form-control" name="Jumlah" required="">
 						</div>
 						<div class="form-group">
 							<label class="mr-2 col-form-label">Delivery </label>
 							<input id="datepicker2" name="check out" type="text" value="mm/dd/yyyy" class="form-control" required="">
-						</div>
-						<div class="form-check">
-							<label class="form-check-label col-form-label" for="l1">
-								<input type="checkbox" class="form-check-input" value="" id="l1">Wash& Fold
-							</label>
-						</div>
-						<div class="form-check">
-							<label class="form-check-label col-form-label" for="l2">
-								<input type="checkbox" class="form-check-input" value="" id="l2">Handwash
-							</label>
-						</div>
-						<div class="form-check">
-							<label class="form-check-label col-form-label" id="l3">
-								<input type="checkbox" class="form-check-input" value="" id="13">Dry Clean
-							</label>
-						</div>
-						<div class="form-check">
-							<label class="form-check-label col-form-label" for="l4">
-								<input type="checkbox" class="form-check-input" value="" id="l4">Carpets
-							</label>
-						</div>
-						<div class="form-group">
-							<label for="comment" class="col-form-label">Pickup Address:</label>
-							<textarea class="form-control" rows="5" id="comment"></textarea>
 						</div>
 
 						<div class="right-w3l">

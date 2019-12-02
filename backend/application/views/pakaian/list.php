@@ -93,10 +93,21 @@
     </div>
     <div class="modal-body">
       <form action="<?php echo base_url() ?>index.php/pakaian/update" method="post" >
-      <input type="hidden" name="id_pakaian" id="id_pakaian" >
-      <br>
-      Nama pakaian
-      <input id="nama_pakaian" type="text" name="nama_pakaian" class="form-control"  placeholder="Nama pakaian"><br><br>
+        <input type="hidden" name="ubah_id_pakaian" ><br>
+        Nama pakaian
+        <input id="ubah_jenis_pakaian" type="text" name="ubah_jenis_pakaian" class="form-control" placeholder="jenis pakaian"><br>
+        Harga pakaian
+        <input id="ubah_harga_pakaian" type="text" name="ubah_harga_pakaian" class="form-control" placeholder="harga pakaian"><br>
+        Keterangan
+        <input id="ubah_keterangan" type="text" name="ubah_keterangan" class="form-control" placeholder=" Keterangan pakaian"><br>
+        Pilih Jenis Paket
+        <select name="ubah_id_jenis_paket" class="form-control">
+            <?php
+            foreach($data_jenis as $d) {
+              echo "<option value='".$d->id_jenis_paket."'>".$d->nama_paket."</option>";
+            }
+            ?>
+          </select><br>
       <input type="submit" name="simpan" value="Simpan" class="btn btn-success">
       </form>
     </div>
@@ -106,12 +117,20 @@
   </div>
 </div>
 </div>
-<script>
-    function tm_detail(id_pakaian){
-      $.getJSON("<?=base_url()?>index.php/pakaian/get_detail/"+id_pakaian,
-  function(data){
-    $("#id_pakaian").val(data['id_pakaian']);
-    $("#nama_pakaian").val(data['nama_pakaian']);
+<script type="text/javascript">
+    function prepare_ubah_user(id_pakaian){
+      $("#ubah_id_pakaian").empty();
+      $("#ubah_jenis_pakaian").empty();
+      $("#ubah_harga_pakaian").empty();
+      $("#ubah_keterangan").empty();
+      $("#ubah_id_jenis_paket").empty();
+
+      $.getJSON('<?php echo base_url(); ?>index.php/pakaian/get_detail_pakaian/' + id_pakaian, function(data){
+          $("#ubah_id_pakaian").val(data.id_pakaian);
+          $("#ubah_jenis_pakaian").val(data.jenis_pakaian);
+          $("#ubah_harga_pakaian").val(data.harga_pakaian);
+          $("#ubah_keterangan").val(data.keterangan);
+          $("#ubah_id_jenis_paket").val(data.id_jenis_paket);
         }
       });
     }

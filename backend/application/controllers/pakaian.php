@@ -21,7 +21,32 @@ class pakaian extends CI_Controller
         $this->load->view('template', $data, FALSE);
 
   }
-  
+
+  public function get_detail_pakaian($id_pakaian){
+    $data = $this->pakaian_model->get_data_pakaian($id_pakaian);
+    echo json_encode($data);
+  }
+
+  public function update(){
+    $this->form_validation->set_rules('id_jenis_paket', 'Jenis Paket', 'trim|required');
+    $this->form_validation->set_rules('jenis_pakaian', 'Jenis Pakaian', 'trim|required');
+    $this->form_validation->set_rules('harga_pakaian', 'Harga', 'trim|required|numeric');
+    $this->form_validation->set_rules('keterangan', 'keterangan', 'trim|required');
+
+          if ($this->form_validation->run() == TRUE ){
+            if ($this->pakaian_model->update() == TRUE ){
+            $this->session->set_flashdata('pesan', 'sukses update');
+            redirect(base_url('index.php/pakaian'), 'refresh');
+          } else{
+
+              $this->session->set_flashdata('pesan', 'sukses update');
+                redirect(base_url('index.php/pakaian'), 'refresh');
+            }
+          }else {
+              $this->session->set_flashdata('pesan', validation_errors());
+              redirect(base_url('index.php/pakaian'), 'refresh');
+            }
+  }
   public function add(){
           $this->form_validation->set_rules('id_jenis_paket', 'Jenis Paket', 'trim|required');
           $this->form_validation->set_rules('jenis_pakaian', 'Jenis Pakaian', 'trim|required');
@@ -47,7 +72,7 @@ class pakaian extends CI_Controller
 
   public function hapus_pakaian($id_pakaian){
     $this->load->model('pakaian_model');
-    $this->pakaian_model->hapus_pakaian($id_user);
+    $this->pakaian_model->hapus_pakaian($id_pakaian);
     redirect(base_url('index.php/pakaian'), 'refresh');
   }
 }
