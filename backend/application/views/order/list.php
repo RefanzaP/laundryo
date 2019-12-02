@@ -13,7 +13,7 @@
               <th scope="col">Kode Transaksi</th>
               <th scope="col">Nama Pelanggan</th>
               <th scope="col">Alamat</th>
-              <th scope="col">Tanggal</th>
+              <th scope="col">Tanggal Pesan</th>
               <th scope="col">Total</th>
               <th scope="col">Status</th>
               <th scope="col">Aksi</th>
@@ -55,14 +55,14 @@
         </div>
         <div class="modal-body">
           <form action="<?php echo base_url() ?>index.php/order/add" method="post" enctype="multipart/form-data">
-          <input type="hidden" name="id_transksi" ><br>
-          Total
-          <input id="total_bayar" type="text" name="total_bayar" class="form-control" placeholder="Total Bayar"><br>
+          <input type="hidden" name="id_transaksi" ><br>
+          Jumlah
+          <input id="qty" type="text" name="qty" class="form-control" placeholder="jumlah"><br>
           Pilih Pelanggan <br>
-              <select name="id_pelanggan" class="form-control" id="id_pelanggan">
+              <select name="id_pelanggan" class="form-control" ">
                 <?php
                 foreach($data_pelanggan as $d) {
-                  echo "<option value='".$d->id_level."'>".$d->nama_user."</option>";
+                  echo "<option value='".$d->id_pelanggan."'>".$d->nama_user."</option>";
                 }
                 ?></select>
           <br>

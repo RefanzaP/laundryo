@@ -10,6 +10,7 @@ class order extends CI_Controller
     if($this->session->userdata('logged_in')!=true){
         redirect(base_url('index.php/login'),'refresh');
     }
+
     $this->load->model('order_model');
   }
 
@@ -33,11 +34,10 @@ class order extends CI_Controller
 
   public function add(){
     $this->form_validation->set_rules('id_pelanggan', 'Pelanggan', 'trim|required');
-    $this->form_validation->set_rules('total_bayar', 'Total Bayar', 'trim|required|numeric');
-
+    $this->form_validation->set_rules('qty', 'Jumlah', 'trim|required|numeric');
 
           if ($this->form_validation->run() == TRUE ){
-            if ($this->order_model->update() == TRUE ){
+            if ($this->order_model->add() == TRUE ){
             $this->session->set_flashdata('pesan', 'sukses update');
             redirect(base_url('index.php/order'), 'refresh');
           } else{

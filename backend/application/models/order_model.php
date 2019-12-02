@@ -55,9 +55,10 @@ class order_model extends CI_Model
       $now = date("Y-m-d H:i:s");
     $data_topik=array(
         'tanggal_pesan' => $now,
-        'id_user' => $_SESSION['id_user'],
         'total_bayar' => $this->input->post('total_bayar'),
         'id_pelanggan' => $this->input->post('id_pelanggan'),
+        'qty' => $this->input->post('qty'),
+        'id_user' => $_SESSION['id_user'],
         'id_status_t' => '4',
     );
   $ql_masuk=$this->db->insert('transaksi', $data_topik);
