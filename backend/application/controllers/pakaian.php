@@ -17,30 +17,40 @@ class pakaian extends CI_Controller
         $this->load->model('pakaian_model');
         $data['arr']=$this->pakaian_model->get_pakaian();
         $this->load->model('level_model');
-        $data['data_level']=$this->level_model->show_owner();
+        $data['data_jenis']=$this->pakaian_model->show_paket();
         $this->load->view('template', $data, FALSE);
 
   }
-
-  public function hapus_pakaian(){
-      $this->load->model('pakaian_model');
-      $this->pakaian_model->pakaian_user($id);
-      redirect(base_url('index.php/pakaian'), 'refresh');
-  }
+  
   public function add(){
-    $data_topik=array(
-        'jenis_pakaian' => $this->input->post('jenis_pakaian'),
-        'username' => $this->input->post('username'),
-        'password' => $this->input->post('password'),
-        'telepon' => $this->input->post('telepon'),
-        'alamat' => $this->input->post('alamat'),
-        'id_level'=>$this->input->post('id_level'),
-    );
-  $ql_masuk=$this->db->insert('user', $data_topik);
-  return $ql_masuk;
-  }
+          $this->form_validation->set_rules('id_jenis_paket', 'Jenis Paket', 'trim|required');
+          $this->form_validation->set_rules('jenis_pakaian', 'Jenis Pakaian', 'trim|required');
+          $this->form_validation->set_rules('harga_pakaian', 'Harga', 'trim|required|numeric');
+          $this->form_validation->set_rules('keterangan', 'keterangan', 'trim|required');
+
+      if ($this->form_validation->run() == TRUE )
+      {
+          $this->load->model('pakaian_model', 'bar');
+          $masuk=$this->bar->add();
+          if($masuk==TRUE){
+              $this->session->set_flashdata('pesan', 'sukses');
+          } else{
+              $this->session->set_flashdata('pesan', 'gagal');
+          }
+          redirect(base_url('index.php/pakaian'), 'refresh');
+      }
+      else{
+          $this->session->set_flashdata('pesan', validation_errors());
+          redirect(base_url('index.php/pakaian'), 'refresh');
+      }
 }
 
+  public function hapus_pakaian($id_pakaian){
+    $this->load->model('pakaian_model');
+    $this->pakaian_model->hapus_pakaian($id_user);
+    redirect(base_url('index.php/pakaian'), 'refresh');
+  }
+}
 
 
  ?>

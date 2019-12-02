@@ -107,6 +107,8 @@
                                         <ul class="collapse">
                                       <li><a href="<?php echo base_url();?>index.php/order" aria-expanded="true"><span>Order Pending</span></a>
                                         </li>
+                                        <li><a href="<?php echo base_url();?>index.php/order_dikerjakan" aria-expanded="true"><span>Order Dikerjakan</span></a>
+                                          </li>
                                         <li><a href="<?php echo base_url();?>index.php/order_selesai" aria-expanded="true"><span>Order Selesai</span></a>
                                           </li>
                                         </ul>
@@ -333,7 +335,6 @@
                             <?php } ?>
                           <h4 class="user-name dropdown-toggle" data-toggle="dropdown"><?php echo $this->session->userdata('username') ?> <i class="fa fa-angle-down"></i></h4>
                           <div class="dropdown-menu">
-                              <a class="dropdown-item" href="<?php echo base_url();?>index.php/profile">Profile</a>
                               <a class="dropdown-item" href="<?php echo base_url();?>index.php/logout">Log Out</a>
                           </div>
                       </div>

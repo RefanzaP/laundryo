@@ -6,7 +6,7 @@
     <div class="col-lg-10 mt-5">
       <div class="table-responsive">
         <table class="table text-center">
-            <h4 class="header-title">List pakaian</h4>
+            <h4 class="header-title">Data Pakaian</h4>
               <a href="#tambah" data-toggle="modal"><span class="glyphicon glyphicon-plus ">Tambah + </span></a><br>
           <thead class="text-uppercase bg-warning">
             <tr class="text-white">
@@ -28,8 +28,8 @@
                   <td>'.$dt_bar->jenis_pakaian.'</td>
                   <td>'.$dt_bar->id_jenis_paket.'</td>
                   <td>'.$dt_bar->harga_pakaian.'</td>
-                  <td>'.$dt_bar->Keterangan.'</td>
-                  <td><a href="#" data-toggle="modal" onclick="prepare_ubah_user('.$dt_bar->id_pakaian.')" data-target="#update">Ubah</a> | <a href="'.base_url('index.php/user/hapus_user/'.$dt_bar->id_pakaian).'" onclick="return confirm(\'anda yakin?\')" >Delete</a></td>
+                  <td>'.$dt_bar->keterangan.'</td>
+                  <td><a href="#" data-toggle="modal" onclick="prepare_ubah_user('.$dt_bar->id_pakaian.')" data-target="#update">Ubah</a> | <a href="'.base_url('index.php/pakaian/hapus_pakaian/'.$dt_bar->id_pakaian).'" onclick="return confirm(\'anda yakin?\')" >Hapus</a></td>
                </tr>';
       }
       ?>
@@ -54,7 +54,11 @@
           <input type="hidden" name="id_pakaian" ><br>
           Nama pakaian
           <input id="jenis_pakaian" type="text" name="jenis_pakaian" class="form-control" placeholder="jenis pakaian"><br>
-          Pilih Pemilik
+          Harga pakaian
+          <input id="harga_pakaian" type="text" name="harga_pakaian" class="form-control" placeholder="harga pakaian"><br>
+          Keterangan
+          <input id="keterangan" type="text" name="keterangan" class="form-control" placeholder=" Keterangan pakaian"><br>
+          Pilih Jenis Paket
           <select name="id_jenis_paket" class="form-control">
               <?php
               foreach($data_jenis as $d) {
