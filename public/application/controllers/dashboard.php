@@ -10,8 +10,32 @@ class dashboard extends CI_Controller
     }
 
     public function index(){
-    
+      $this->load->model('order_model');
+      $data['data_pakaian']=$this->order_model->get_pakaian();
+      $this->load->model('order_model');
+      $data['data_paket']=$this->order_model->get_jenis();
+
     $this->load->view('template');
+  }
+
+  public function add(){
+    $this->form_validation->set_rules('id_jenis_pakaian', 'Pakaian', 'trim|required');
+      $this->form_validation->set_rules('id_jenis_paket', 'Jenis Paket', 'trim|required');
+    $this->form_validation->set_rules('qty', 'Jumlah', 'trim|required|numeric');
+
+          if ($this->form_validation->run() == TRUE ){
+            if ($this->order_model->add() == TRUE ){
+            $this->session->set_flashdata('pesan', 'sukses update');
+            redirect(base_url('index.php/order'), 'refresh');
+          } else{
+
+              $this->session->set_flashdata('pesan', 'sukses update');
+                redirect(base_url('index.php/order'), 'refresh');
+            }
+          }else {
+              $this->session->set_flashdata('pesan', validation_errors());
+              redirect(base_url('index.php/order'), 'refresh');
+            }
   }
 
 

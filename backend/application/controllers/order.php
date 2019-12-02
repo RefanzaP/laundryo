@@ -19,10 +19,13 @@ class order extends CI_Controller
     $this->load->model('order_model');
     $data['arr']=$this->order_model->get_order();
     $this->load->model('order_model');
-    $data['data_status']=$this->order_model->get_status();
+    $data['data_pakaian']=$this->order_model->get_pakaian();
+    $this->load->model('order_model');
+    $data['data_laundry']=$this->order_model->get_laundry();
     $this->load->model('order_model');
     $data['data_pelanggan']=$this->order_model->get_pelanggan();
-
+    $this->load->model('order_model');
+    $data['data_jenis']=$this->order_model->get_jenis();
 
 		    $data_post = $this->db->get('transaksi');
         $config['total_rows'] = $data_post->num_rows();
@@ -62,6 +65,9 @@ class order extends CI_Controller
 
   public function add(){
     $this->form_validation->set_rules('id_pelanggan', 'Pelanggan', 'trim|required');
+    $this->form_validation->set_rules('id_jenis_paket', 'Paket', 'trim|required');
+    $this->form_validation->set_rules('id_pakaian', 'Pakaian', 'trim|required');
+    $this->form_validation->set_rules('id_laundry', 'laundry', 'trim|required');
     $this->form_validation->set_rules('qty', 'Jumlah', 'trim|required|numeric');
 
           if ($this->form_validation->run() == TRUE ){

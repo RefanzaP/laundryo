@@ -28,6 +28,7 @@
                   <td>'.$no.'</td>
                   <td>'.$dt_bar->id_transaksi.'</td>
                   <td>'.$dt_bar->nama_user.'</td>
+                  <td>'.$dt_bar->nama.'</td>
                   <td>'.$dt_bar->alamat.'</td>
                   <td>'.$dt_bar->tanggal_pesan.'</td>
                   <td>'.$dt_bar->qty.'</td>
@@ -57,15 +58,37 @@
         <div class="modal-body">
           <form action="<?php echo base_url() ?>index.php/order/add" method="post" enctype="multipart/form-data">
           <input type="hidden" name="id_transaksi" ><br>
-          Jumlah
-          <input id="qty" type="text" name="qty" class="form-control" placeholder="jumlah"><br>
-          Pilih pelanggan <br>
+
+          Pakaian
+          <select name="id_pakaian" class="form-control" >
+            <?php
+            foreach($data_pakaian as $d) {
+              echo "<option value='".$d->id_pakaian."'>".$d->jenis_pakaian."</option>";
+            }
+            ?></select>
+          Laundry
+          <select name="id_laundry" class="form-control" >
+            <?php
+            foreach($data_laundry as $d) {
+              echo "<option value='".$d->id_laundry."'>".$d->nama_laundry."</option>";
+            }
+            ?></select>
+            Pilih pelanggan <br>
               <select name="id_pelanggan" class="form-control" >
                 <?php
                 foreach($data_pelanggan as $d) {
                   echo "<option value='".$d->id_pelanggan."'>".$d->nama_user."</option>";
                 }
                 ?></select>
+                Pilih jenis paket <br>
+                  <select name="id_jenis_paket" class="form-control" >
+                    <?php
+                    foreach($data_jenis as $d) {
+                      echo "<option value='".$d->id_jenis_paket."'>".$d->nama_paket."</option>";
+                    }
+                    ?></select>
+                Jumlah
+                <input id="qty" type="text" name="qty" class="form-control" placeholder="jumlah"><br>
           <br>
           <input type="submit" name="simpan" value="Simpan" class="btn btn-success">
           <input type="button" value="Cancel" class="btn btn-defaul" data-dismiss="modal">

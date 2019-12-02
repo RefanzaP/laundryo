@@ -790,15 +790,14 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				<div class="modal-body">
 					<form action="<?php echo base_url() ?>index.php/order/add" method="post" enctype="multipart/form-data">
 						<div class="form-group">
+							  <input type="hidden" name="id_transaksi" >
 							<label for="recipient-name" class="col-form-label">Jenis Pakaian</label>
-							<select type="text" class="form-control" placeholder=" " name="Name" id="recipient-name" required="">
-								<option value="">Jeans</option>
-								<option value="">Non Jeans</option>
-								<option value="">Selimut</option>
-								<option value="">Sprei</option>
-								<option value="">Handuk</option>
-								<option value="">Boneka</option>
-							</select>
+							<select name="id_pakaian" class="form-control" >
+                <?php
+                foreach($data_pakaian as $d) {
+                  echo "<option value='".$d->id_pakaian."'>".$d->jenis_pakaian."</option>";
+                }
+                ?></select>
 						</div>
 						<div class="form-group">
 						<label for="recipient-name" class="col-form-label">Jenis Paket</label>

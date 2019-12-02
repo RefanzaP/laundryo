@@ -26,7 +26,7 @@
           echo '<tr>
                   <td>'.$no.'</td>
                   <td>'.$dt_bar->jenis_pakaian.'</td>
-                  <td>'.$dt_bar->id_jenis_paket.'</td>
+                  <td>'.$dt_bar->nama_paket.'</td>
                   <td>'.$dt_bar->harga_pakaian.'</td>
                   <td>'.$dt_bar->keterangan.'</td>
                   <td><a href="#" data-toggle="modal" onclick="prepare_ubah_user('.$dt_bar->id_pakaian.')" data-target="#update">Ubah</a> | <a href="'.base_url('index.php/pakaian/hapus_pakaian/'.$dt_bar->id_pakaian).'" onclick="return confirm(\'anda yakin?\')" >Hapus</a></td>
