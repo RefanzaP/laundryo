@@ -5,7 +5,7 @@
 	<title>Laundry-O</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
-	<meta name="keywords" content="Go Laundry Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+	<meta name="keywords" content="Go Laundry Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 	<script>
 		addEventListener("load", function () {
@@ -38,9 +38,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<nav class="navbar navbar-expand-lg navbar-light">
 				<a class="navbar-brand" href="index.html">
-
-					<img src="<?=base_url()?>assets/images/logo.png" width="80" heigth="80" href="<?=base_url()?>">
-
+				
+					<img src="<?=base_url()?>assets/images/logo.png" width="80" heigth="80" href="<?=base_url()?>"> 
+					
 				</a>
 				<button class="navbar-toggler ml-md-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
 				    aria-expanded="false" aria-label="Toggle navigation">
@@ -50,14 +50,14 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav mx-auto text-center">
 						<li class="nav-item active  mr-3">
-							<a class="nav-link" href="<?=base_url()?>index.php/dashboard">Home
+							<a class="nav-link" href="<?=base_url()?>index.php/dashboard">Home 
 								<span class="sr-only">(current)</span>
 							</a>
 						</li>
 						<li class="nav-item  mr-3">
 							<a class="nav-link scroll" href="#about">about</a>
 						</li>
-						<!-- <li class="nav-item dropdown mr-3">
+						<li class="nav-item dropdown mr-3">
 							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
 							    aria-expanded="false">
 								Dropdown
@@ -71,84 +71,40 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 								<a class="dropdown-item" href="<?=base_url()?>index.php/harga">List Harga</a>
 								<a class="dropdown-item scroll" href="#testimonials">Testimonials</a>
 							</div>
-						</li> -->
+						</li>
 						<li class="nav-item">
 							<a class="nav-link scroll" href="#contact">contact</a>
 						</li>
-						<?php if(!empty($_SESSION['username'])){ ?>
-									<li class="nav-item dropdown mr-3">
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-									aria-expanded="false">
-								Hi! <?php echo $this->session->userdata('username');?>
-							</a>
-							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="" href="<?php echo base_url('index.php/logout');?>">Logout</a>
-								<div class="dropdown-divider"></div>
-								<a href="<?=base_url()?>index.php/transaksi">Transaksi Saya</a>
-							</li>
-							 <!-- <a class="nav-link scroll" aria-pressed="false" > Hi! <?php echo $this->session->userdata('username');?> </a> -->
-					<?php } else {?>
 						<li class="nav-item">
-							<a class="nav-link scroll" href="#" data-toggle="modal"  aria-pressed="false" data-target="#loginModal">Sign in</a>
+							<a class="nav-link scroll" href="#" data-toggle="modal"  aria-pressed="false" data-target="#loginModal">Sign</a>
 						</li>
-					<?php }?>
 					</ul>
-					<?php if(!empty($_SESSION['username'])){ ?>
 					<button type="button" class="btn btn-info btn-lg-block w3ls-btn px-4 text-uppercase font-weight-bold" data-toggle="modal"
 					    aria-pressed="false" data-target="#exampleModal">
 						order
 					</button>
-				<?php } else {}?>
+
 				</div>
 			</nav>
 		</div>
 	</header>
-	<!-- banner -->
-	<div class="banner" id="home">
-		<div class="container">
-			<div class="banner-text text-center">
-				<div class="callbacks_container">
-					<ul class="rslides" id="slider3">
-						<li>
-							<div class="slider-info">
-								<h3 class="text-capitalize">We care for all your valued garments </h3>
-								<a class="btn btn-primary  mt-4 text-capitalize scroll" href="#about" role="button">read more</a>
-							</div>
-						</li>
-						<li>
-							<div class="slider-info">
-								<h3 class="text-capitalize">Trust Us, We Save Your Time.</h3>
-								<a class="btn btn-primary  mt-4 text-capitalize scroll" href="#about" role="button">read more</a>
-							</div>
-						</li>
-						<li>
-							<div class="slider-info">
-								<h3 class="text-capitalize">we offer the best laundry services</h3>
-								<a class="btn btn-primary  mt-4 text-capitalize scroll" href="#about" role="button">read more</a>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- //banner -->
+	
 	<!-- about -->
-	<section class="about-w3ls" id="about">
+	<section class="about-w3ls2" id="about">
 		<div class="container">
 			<div class="jumbotron text-center pt-0">
 				<img src="<?=base_url()?>assets/images/.jpg" alt="" class="img-fluid rounded-circle">
 				<br><br><br><br>
-				<h1 class="ab-title my-5">About Us</h1>
+				<h1 class="ab-title my-5"><b>About Us</b></h1>
 				<h2 class="lead">We Promise Highest Quality Care</h2>
 				<hr class="my-4">
-				<p>Laundry-O adalah jasa laundry yang paling tepat untuk laundry pakaian sehari-hari, baik itu kaos,
-					celana, kaos kaki, dll. Harganya juga sangat terjangkau, laundry-O menggunakan deterjen ramah lingkungan,
-					proses pencucian 1 Mesin 1 Pelanggan (tidak dicampur dengan pelanggan lain) sehingga pakaian anda akan
-					terjaga kebersihannya, tidak akan bau apek. Kami tidak melakukan proses jemur manual, kami menggunakan mesin
+				<p>Laundry-O adalah jasa laundry yang paling tepat untuk laundry pakaian sehari-hari, baik itu kaos, 
+					celana, kaos kaki, dll. Harganya juga sangat terjangkau, laundry-O menggunakan deterjen ramah lingkungan, 
+					proses pencucian 1 Mesin 1 Pelanggan (tidak dicampur dengan pelanggan lain) sehingga pakaian anda akan 
+					terjaga kebersihannya, tidak akan bau apek. Kami tidak melakukan proses jemur manual, kami menggunakan mesin 
 					pengering modern untuk memberikan hasil terbaik untuk laundry kiloan yang kami kerjakan.</p>
 				<p class="lead">
-					<a class="btn btn-primary btn-lg mt-3 scroll" href="#services" role="button">Learn more</a>
+				
 				</p>
 			</div>
 		</div>
@@ -185,7 +141,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 	</div>
 	<!-- //services-->
 	<!-- stats -->
-	<section class="agile_stats text-center py-5">
+	<section class="agile_stats2 text-center py-5">
 		<div class="container pt-sm-5">
 			<div class="stats_agile mb-sm-5 mb-3">
 				<h3 class="stat-title text-capitalize pb-md-5 pb-4">let us do your laundry</h3>
@@ -223,8 +179,27 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</section>
 	<!-- //stats -->
-	<!-- team -->
-	<section class="wthree-row py-5" id="team">
+	
+	
+	<!-- pricing -->
+	<section class="wthree-row py-md-5 pt-sm-5" id="pricing">
+		<div class="container py-md-5 py-3">
+		<h1 class="ab-title my-5"><b>Who We Are</b></h1>
+				
+				<hr class="my-4">
+				<p>We are team of delicated people who seek to revolutionise Laundry business by providing online 
+					web and mobile app ordering service. With a touch of your finger we will provide door to door 
+					pickup and delivery service at your convenience. Saving your precious time to do what really 
+					matter to you.</p>
+				<p class="lead">
+				
+				</p>
+		</div>
+	</section>
+	<!-- //pricing -->
+	
+<!-- team -->
+<section class="wthree-row py-5" id="team">
 		<div class="container py-md-5 py-3">
 			<div class="py-md-5 py-3 bg-pricemain text-center">
 				<h3 class="w3ls-title text-center text-capitalize pb-md-5 pb-4">meet our team</h3>
@@ -232,12 +207,12 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 			<div class="row">
 				<div class="col-lg-3 col-sm-6 team-grids">
 					<div class="team-effect">
-						<img src="<?=base_url()?>assets/images/t1.jpg" alt="img" class="img-responsive">
+						<img src="<?=base_url()?>assets/images/a2.jpeg" alt="img" class="img-responsive">
 					</div>
 					<!-- team text -->
 					<div class="footerv2-w3ls mt-3">
-						<h4>John Smith</h4>
-						<p>Creative Director</p>
+						<h4>Ardika Wahyu Pratama</h4>
+						<p>Hustler</p>
 						<ul class="social-iconsv2 agileinfo">
 							<li>
 								<a href="#">
@@ -265,12 +240,12 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<div class="col-lg-3 col-sm-6 team-grids mt-sm-0 mt-5">
 					<div class="team-effect">
-						<img src="<?=base_url()?>assets/images/t3.jpg" alt="img" class="img-responsive">
+						<img src="<?=base_url()?>assets/images/a1.jpeg" alt="img" class="img-responsive">
 					</div>
 					<!-- team text -->
 					<div class="footerv2-w3ls mt-3">
-						<h4>Thomson Doe</h4>
-						<p>Chairman</p>
+						<h4>Silvia Devita Rahmawati</h4>
+						<p>Hipster</p>
 						<ul class="social-iconsv2 agileinfo">
 							<li>
 								<a href="#">
@@ -298,12 +273,12 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<div class="col-lg-3 col-sm-6 team-grids mt-lg-0 mt-5">
 					<div class="team-effect">
-						<img src="<?=base_url()?>assets/images/t2.jpg" alt="img" class="img-responsive">
+						<img src="<?=base_url()?>assets/images/a3.jpg" alt="img" class="img-responsive">
 					</div>
 					<!-- team text -->
 					<div class="footerv2-w3ls mt-3">
-						<h4>Smith Kevin</h4>
-						<p>Executive Manager</p>
+						<h4>Refanxa Pradiptha</h4>
+						<p>Hacker</p>
 						<ul class="social-iconsv2 agileinfo">
 							<li>
 								<a href="#">
@@ -329,309 +304,33 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<!-- //team text -->
 				</div>
-				<div class="col-lg-3 col-sm-6 team-grids mt-lg-0 mt-5">
-					<div class="team-effect">
-						<img src="<?=base_url()?>assets/images/t4.jpg" alt="img" class="img-responsive">
-					</div>
-					<!-- team text -->
-					<div class="footerv2-w3ls mt-3">
-						<h4>Laura Hill</h4>
-						<p>HR Manager</p>
-						<ul class="social-iconsv2 agileinfo">
-							<li>
-								<a href="#">
-									<i class="fab fa-facebook-f"></i>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<i class="fab fa-twitter"></i>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<i class="fab fa-google-plus-g"></i>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<i class="fab fa-linkedin-in"></i>
-								</a>
-							</li>
-						</ul>
-					</div>
-					<!-- //team text -->
-				</div>
+				
+					
 			</div>
 		</div>
 	</section>
 	<!-- //team -->
-	<!-- gallery -->
-	<div class="gallery  py-md-5 py-3" id="gallery">
-		<div class="container">
-			<h3 class="w3ls-title text-center text-capitalize py-md-4 py-3">gallery</h3>
-			<div class="gallery_gds row pt-md-5 pt-3">
-				<div class="col-4 gal-w3l">
-					<div class="agileits-img">
-						<a href="<?=base_url()?>assets/images/g1.jpg" class="swipebox" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus tortor diam, ac lobortis justo rutrum quis. Praesent non purus fermentum, eleifend velit non">
-							<img class="img-responsive img-style row2" src="<?=base_url()?>assets/images/f1.jpg" alt="" />
-						</a>
-					</div>
-				</div>
-				<div class="col-4  gal-w3l">
-					<div class="agileits-img">
-						<a href="<?=base_url()?>assets/images/g2.jpg" class="swipebox" title="Duis maximus tortor diam, ac lobortis justo rutrum quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non purus fermentum, eleifend velit non">
-							<img src="<?=base_url()?>assets/images/g2.jpg" alt="" class="img-responsive img-style row2" />
-						</a>
-					</div>
-				</div>
-				<div class="col-4  gal-w3l">
-					<div class="agileits-img">
-						<a href="<?=base_url()?>assets/images/g3.jpg" class="swipebox" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus tortor diam, ac lobortis justo rutrum quis. Praesent non purus fermentum, eleifend velit non">
-							<img src="<?=base_url()?>assets/images/g3.jpg" alt="" class="img-responsive img-style row2" />
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="gallery_gds row">
-				<div class="col-4  gal-w3l">
-					<div class="agileits-img">
-						<a href="<?=base_url()?>assets/images/g4.jpg" class="swipebox" title="Praesent non purus fermentum, eleifend velit non Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus tortor diam, ac lobortis justo rutrum quis.">
-							<img src="<?=base_url()?>assets/images/g4.jpg" alt="" class="img-responsive img-style row2" />
-						</a>
-					</div>
-				</div>
-				<div class="col-4  gal-w3l">
-					<div class="agileits-img">
-						<a href="<?=base_url()?>assets/images/g5.jpg" class="swipebox" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus tortor diam, ac lobortis justo rutrum quis. Praesent non purus fermentum, eleifend velit non">
-							<img src="<?=base_url()?>assets/images/g5.jpg" alt="" class="img-responsive img-style row2" />
-						</a>
-					</div>
-				</div>
-				<div class="col-4  gal-w3l">
-					<div class="agileits-img">
-						<a href="<?=base_url()?>assets/images/g6.jpg" class="swipebox" title="Duis maximus tortor diam, ac lobortis justo rutrum quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non purus fermentum, eleifend velit non">
-							<img src="<?=base_url()?>assets/images/g6.jpg" alt="" class="img-responsive img-style row2" />
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="row pb-md-5 pb-3">
-				<div class="col-4  gal-w3l">
-					<div class="agileits-img">
-						<a href="<?=base_url()?>assets/images/g7.jpg" class="swipebox" title="Praesent non purus fermentum, eleifend velit non Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus tortor diam, ac lobortis justo rutrum quis.">
-							<img src="<?=base_url()?>assets/images/g7.jpg" alt="" class="img-responsive img-style row2" />
-						</a>
-					</div>
-				</div>
-				<div class="col-4  gal-w3l">
-					<div class="agileits-img">
-						<a href="<?=base_url()?>assets/images/g8.jpg" class="swipebox" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus tortor diam, ac lobortis justo rutrum quis. Praesent non purus fermentum, eleifend velit non">
-							<img src="<?=base_url()?>assets/images/g8.jpg" alt="" class="img-responsive img-style row2" />
-						</a>
-					</div>
-				</div>
-				<div class="col-4  gal-w3l">
-					<div class="agileits-img">
-						<a href="<?=base_url()?>assets/images/g9.jpg" class="swipebox" title="Duis maximus tortor diam, ac lobortis justo rutrum quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non purus fermentum, eleifend velit non">
-							<img src="<?=base_url()?>assets/images/f9.jpg" alt="" class="img-responsive img-style row2" />
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- //gallery -->
-	<!-- pricing -->
-	<section class="wthree-row py-md-5 pt-sm-5" id="pricing">
-		<div class="container py-md-5 py-3">
-			<h3 class="w3ls-title text-center text-capitalize pb-md-5 pb-4">Pricing Plans</h3>
-			<div class="row pb-5">
-				<div class="col-lg-3 col-md-6 text-center  pb-0 pt-3 px-3 agile-pricegrid">
-					<div class="bg-price py-sm-3 rounded-top text-center">
-						<h4>Basic</h4>
-						<span class="mx-auto my-2"></span>
-					</div>
-					<div class="p-3">
-						<h5 class="pt-2">
-							<sup>$</sup>39</h5>
-						<span>per month</span>
-					</div>
-					<ul class="list-group-flush">
-						<li class="list-group-item">Cras justo odio</li>
-						<li class="list-group-item">Dapibus ac facilisis in</li>
-						<li class="list-group-item">Morbi leo risus</li>
-						<li class="list-group-item">Cras justo odio</li>
-						<li class="list-group-item">Porta ac consectetur ac</li>
-					</ul>
-					<div class="py-3 px-2">
-						<button type="button" class="btn btn-info btn-lg btn-block text-md-center" data-toggle="modal" aria-pressed="false" data-target="#exampleModal">Get Started</button>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 text-center pb-0 pt-3 px-3 agile-pricegrid">
-					<div class="bg-price py-sm-3 rounded-top text-center">
-						<h4>Regular</h4>
-						<span class="mx-auto my-2"></span>
-					</div>
-					<div class="p-3">
-						<h5 class="pt-2">
-							<sup>$</sup>69</h5>
-						<span>per month</span>
-					</div>
-					<ul class="list-group-flush">
-						<li class="list-group-item">Cras justo odio</li>
-						<li class="list-group-item">Dapibus ac facilisis in</li>
-						<li class="list-group-item">Morbi leo risus</li>
-						<li class="list-group-item">Cras justo odio</li>
-						<li class="list-group-item">Porta ac consectetur ac</li>
-					</ul>
-					<div class="py-3 px-2">
-						<button type="button" class="btn btn-info btn-lg btn-block" data-toggle="modal" aria-pressed="false" data-target="#exampleModal">Get Started</button>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 text-center p-3  agile-pricegrid">
-					<div class="bg-price py-sm-3 rounded-top text-center">
-						<h4>Mega</h4>
-						<span class="mx-auto my-2"></span>
-					</div>
-					<div class="p-3">
-						<h5 class="pt-2">
-							<sup>$</sup>99</h5>
-						<span>per month</span>
-					</div>
-					<ul class="list-group-flush">
-						<li class="list-group-item">Cras justo odio</li>
-						<li class="list-group-item">Dapibus ac facilisis in</li>
-						<li class="list-group-item">Morbi leo risus</li>
-						<li class="list-group-item">Cras justo odio</li>
-						<li class="list-group-item">Porta ac consectetur ac</li>
-					</ul>
-					<div class="py-3 px-2">
-						<button type="button" class="btn btn-info btn-lg btn-block" data-toggle="modal" aria-pressed="false" data-target="#exampleModal">Get Started</button>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 text-center pb-0 pt-3 px-3 agile-pricegrid">
-					<div class="bg-price py-sm-3 rounded-top text-center">
-						<h4>Combo</h4>
-						<span class="mx-auto my-2"></span>
-					</div>
-					<div class="p-3">
-						<h5 class="pt-2">
-							<sup>$</sup>199</h5>
-						<span>per month</span>
-					</div>
-					<ul class="list-group-flush">
-						<li class="list-group-item">Cras justo odio</li>
-						<li class="list-group-item">Dapibus ac facilisis in</li>
-						<li class="list-group-item">Morbi leo risus</li>
-						<li class="list-group-item">Cras justo odio</li>
-						<li class="list-group-item">Porta ac consectetur ac</li>
-					</ul>
-					<div class="py-3 px-2">
-						<button type="button" class="btn btn-info btn-lg btn-block" data-toggle="modal" aria-pressed="false" data-target="#exampleModal">Get Started</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- //pricing -->
-	<!-- testimonials -->
-	<section class="wthree-row py-5 testi-agile" id="testimonials">
-		<div class="container py-md-5 py-3">
-			<h3 class="w3ls-title text-center text-capitalize pb-md-5 pb-4">testimonials</h3>
-			<div class="w3_testimonials_grids w3_testimonials_grids">
-				<div class="sreen-gallery-cursual">
-					<div id="owl-demo" class="owl-carouselpb-5">
-						<div class="item-owl text-center">
-							<div class="img-agile">
-								<i class="fas fa-user"></i>
-								<h6 class="mt-3 text-white">Michael Paul</h6>
-							</div>
-							<div class="test-review test-tooltip1">
-								<p class="mx-auto mt-3 text-white">
-									<i class="fa fa-quote-left" aria-hidden="true"></i> Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-									sed diam voluptua.
-									<i class="fa fa-quote-right" aria-hidden="true"></i>
-								</p>
-							</div>
-						</div>
-						<div class="item-owl">
-							<div class="img-agile">
-								<i class="fas fa-user"></i>
-								<h6 class="mt-3 text-white">Riya Allen</h6>
-							</div>
-							<div class="test-review test-tooltip1">
-								<p class="mx-auto mt-3 text-white">
-									<i class="fa fa-quote-left" aria-hidden="true"></i> Polite sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-									diam voluptua.
-									<i class="fa fa-quote-right" aria-hidden="true"></i>
-								</p>
-							</div>
-						</div>
-						<div class="item-owl">
-							<div class="img-agile">
-								<i class="fas fa-user"></i>
-								<h6 class="mt-3 text-white">Riya Allen</h6>
-							</div>
-							<div class="test-review test-tooltip1">
-								<p class="mx-auto mt-3 text-white">
-									<i class="fa fa-quote-left" aria-hidden="true"></i> Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-									sed diam voluptua.
-									<i class="fa fa-quote-right" aria-hidden="true"></i>
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- //testimonials -->
+
 	<!-- contact -->
 	<section class="wthree-row py-5 w3-contact" id="contact">
 		<div class="container py-md-5">
-			<h3 class="w3ls-title text-center text-capitalize pb-md-5 pb-4">contact us</h3>
+			<h3 class="w3ls-title text-center text-capitalize pb-md-5 pb-4">Call Us</h3>
 			<div class="row contact-form py-3">
 				<div class="col-lg-6 wthree-form-left">
 					<!-- contact form grid -->
 					<div class="contact-top1">
 						<form action="#" method="get" class="f-color">
-							<div class="form-group">
-								<label for="contactusername">Name</label>
-								<input type="text" class="form-control" id="contactusername" required>
-							</div>
-							<div class="form-group">
-								<label for="contactemail">Email</label>
-								<input type="email" class="form-control" id="contactemail" required>
-							</div>
-							<div class="form-group">
-								<label for="contactcomment">Your Message</label>
-								<textarea class="form-control" rows="5" id="contactcomment" required></textarea>
-							</div>
-							<button type="submit" class="btn btn-info btn-block">Submit</button>
+							<section class="call-us" >
+								<div class="call">CALL US</div>
+								<div class="call-phone">09458 181 990, 09458 181 980</div>
+							</section>
+			
 						</form>
 					</div>
 					<!--  //contact form grid ends here -->
 				</div>
 				<!-- contact details -->
-				<!-- contact map grid -->
-				<div class="col-lg-6  mt-lg-0 mt-5 map contact-right">
-					<iframe class="h-50" src="https://maps.google.com/maps?q=smk%20telkom%20malang&t=&z=17&ie=UTF8&iwloc=&output=embed"
-					    allowfullscreen></iframe>
-					<div class="address mt-3">
-						<h5 class="pb-3 text-capitalize">Contact info</h5>
-						<address>
-							<p class="c-txt">Jl. Danau Ranau, Sawojajar, Kec. Kedungkandang, Kota Malang, Jawa Timur 65139</p>
-							<p>
-								+62 (0341) 712500</p>
-							<p>
-								<p>
-									<a href="mailto:info@example.com">smktelkom@sch.id</a>
-								</p>
-						</address>
-					</div>
-				</div>
-				<!--//contact map grid ends here-->
+				
 			</div>
 			<!-- //contact details container -->
 		</div>
@@ -713,14 +412,14 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					</button>
 				</div>
 				<div class="modal-body">
-					<form action="<?php echo base_url() ?>index.php/login/proses" method="post" class="p-3">
+					<form action="#" method="post" class="p-3">
 						<div class="form-group">
 							<label for="recipient-name" class="col-form-label">Username</label>
-							<input type="text" class="form-control" placeholder=" " name="username" id="username" required="">
+							<input type="text" class="form-control" placeholder=" " name="Name" id="recipient-name" required="">
 						</div>
 						<div class="form-group">
 							<label for="recipient-name1" class="col-form-label">Password</label>
-							<input type="password" class="form-control" placeholder=" " name="password" id="password" required="">
+							<input type="password" class="form-control" placeholder=" " name="Name" id="recipient-name1" required="">
 						</div>
 
 						<div class="right-w3l">
@@ -745,32 +444,29 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					</button>
 				</div>
 				<div class="modal-body">
-					<form action="<?php echo base_url() ?>index.php/register/add" method="post" class="p-3">
+					<form action="#" method="post" class="p-3">
 						<div class="form-group">
 							<label for="recipient-name" class="col-form-label">Name</label>
-							<input type="text" class="form-control" placeholder=" " name="nama_user" id="nama_user" required="">
+							<input type="text" class="form-control" placeholder=" " name="Name" id="recipient-name" required="">
 						</div>
 						<div class="form-group">
 							<label for="recipient-name" class="col-form-label">Telephone</label>
-							<input type="telephone" class="form-control" placeholder=" " name="telepon" id="telepon" required="">
+							<input type="telephone" class="form-control" placeholder=" " name="Name" id="recipient-name" required="">
 						</div>
 						<div class="form-group">
 							<label for="recipient-name" class="col-form-label">Username</label>
-							<input type="text" class="form-control" placeholder=" " name="username" id="username" required="">
+							<input type="text" class="form-control" placeholder=" " name="Name" id="recipient-name" required="">
 						</div>
 						<div class="form-group">
 							<label for="recipient-name1" class="col-form-label">Password</label>
-							<input type="password" class="form-control" placeholder=" " name="password" id="password" required="">
+							<input type="password" class="form-control" placeholder=" " name="Name" id="recipient-name1" required="">
 						</div>
-						<div class="form-group">
-							<label for="recipient-name" class="col-form-label">Address</label>
-							<input type="text" class="form-control" placeholder=" " name="alamat" id="alamat" required="">
-						</div>
+
 						<div class="right-w3l">
 							<input type="submit" class="form-control" value="sign up">
 						</div>
 					</form>
-
+					
 				</div>
 			</div>
 		</div>
@@ -788,7 +484,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					</button>
 				</div>
 				<div class="modal-body">
-					<form action="<?php echo base_url() ?>index.php/order/add" method="post" enctype="multipart/form-data">
+					<form action="#" method="post" class="p-3">
 						<div class="form-group">
 							<label for="recipient-name" class="col-form-label">Jenis Pakaian</label>
 							<select type="text" class="form-control" placeholder=" " name="Name" id="recipient-name" required="">
@@ -875,7 +571,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				 containerID: 'toTop', // fading element id
 				 containerHoverID: 'toTopHover', // fading element hover id
 				 scrollSpeed: 1200,
-				 easingType: 'linear'
+				 easingType: 'linear' 
 			 };
 			 */
 

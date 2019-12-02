@@ -1,19 +1,17 @@
 <?php
 
-class dashboard extends CI_Controller
+class transaksi extends CI_Controller
 
   {
 
     public function __construct(){
       parent::__construct();
-
+      
     }
 
     public function index(){
-    
-    $this->load->view('template');
+    $this->load->view('v_transaksi');
   }
-
 
   }
 
