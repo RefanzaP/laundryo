@@ -30,7 +30,7 @@
                   <td>'.$dt_bar->nama_user.'</td>
                   <td>'.$dt_bar->alamat.'</td>
                   <td>'.$dt_bar->tanggal_pesan.'</td>
-                  <td>'.$dt_bar->total_bayar.'</td>
+                  <td>'.$dt_bar->qty.'</td>
                   <td><a href="#" data-toggle="modal" onclick="prepare_ubah_user('.$dt_bar->id_transaksi.')" data-target="#update" >'.$dt_bar->status_pesan.'</a></td>
                    <td><a href="'.base_url('index.php/order/hapus_order/'.$dt_bar->id_transaksi).'" onclick="return confirm(\'anda yakin?\')" >Delete</a></td>
                </tr>';
