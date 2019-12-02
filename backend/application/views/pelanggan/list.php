@@ -28,7 +28,7 @@
                   <td>'.$dt_bar->nama_user.'</td>
                   <td>'.$dt_bar->username.'</td>
                   <td>'.$dt_bar->alamat.'</td>
-                  <td>'.$dt_bar->telepon.'</td>
+                  <td>+62'.$dt_bar->telepon.'</td>
                   <td><a href="#" data-toggle="modal" onclick="prepare_ubah_user('.$dt_bar->id_pelanggan.')" data-target="#update">Ubah</a> | <a href="'.base_url('index.php/pelanggan/hapus_user/'.$dt_bar->id_pelanggan).'" onclick="return confirm(\'anda yakin?\')" >Hapus</a></td>
                </tr>';
             }

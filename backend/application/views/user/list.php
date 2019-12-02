@@ -26,7 +26,7 @@
                   <td>'.$no.'</td>
                   <td>'.$dt_bar->nama.'</td>
                   <td>'.$dt_bar->username.'</td>
-                  <td>'.$dt_bar->telepon.'</td>
+                  <td>+62'.$dt_bar->telepon.'</td>
                   <td>'.$dt_bar->alamat.'</td>
                   <td><a href="#" data-toggle="modal" onclick="prepare_ubah_user('.$dt_bar->id_user.')" data-target="#update">Ubah</a> | <a href="'.base_url('index.php/user/hapus_user/'.$dt_bar->id_user).'" onclick="return confirm(\'anda yakin?\')" >Delete</a></td>
                </tr>';
