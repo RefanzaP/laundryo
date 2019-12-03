@@ -12,10 +12,13 @@
               <th scope="col">No</th>
               <th scope="col">Kode Transaksi</th>
               <th scope="col">Nama Pelanggan</th>
+              <th scope="col">Driver </th>
+              <th scope="col">Jenis Pakaian</th>
+              <th scope="col">Tempat Laundry</th>
               <th scope="col">Alamat</th>
               <th scope="col">Tanggal Pesan</th>
-              <th scope="col">Total</th>
-              <th scope="col">Status</th>
+              <th scope="col">Jumlah Pesan</th>
+              <th scope="col">Status Pesananan</th>
               <th scope="col">Aksi</th>
             </tr>
           </thead>
@@ -29,6 +32,8 @@
                   <td>'.$dt_bar->id_transaksi.'</td>
                   <td>'.$dt_bar->nama_user.'</td>
                   <td>'.$dt_bar->nama.'</td>
+                  <td>'.$dt_bar->jenis_pakaian.'</td>
+                  <td>'.$dt_bar->nama_laundry.'</td>
                   <td>'.$dt_bar->alamat.'</td>
                   <td>'.$dt_bar->tanggal_pesan.'</td>
                   <td>'.$dt_bar->qty.'</td>

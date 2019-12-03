@@ -26,6 +26,8 @@ class order extends CI_Controller
     $data['data_pelanggan']=$this->order_model->get_pelanggan();
     $this->load->model('order_model');
     $data['data_jenis']=$this->order_model->get_jenis();
+    $this->load->model('order_model');
+    $data['data_status']=$this->order_model->get_status();
 
 		    $data_post = $this->db->get('transaksi');
         $config['total_rows'] = $data_post->num_rows();

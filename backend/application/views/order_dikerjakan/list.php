@@ -12,7 +12,7 @@
               <th scope="col">Kode Transaksi</th>
               <th scope="col">Nama Pelanggan</th>
               <th scope="col">Alamat</th>
-              <th scope="col">Total</th>
+              <th scope="col">Tempat Laundry</th>
               <th scope="col">Status</th>
               <th scope="col">Aksi</th>
             </tr>
@@ -27,7 +27,7 @@
                   <td>'.$dt_bar->id_transaksi.'</td>
                   <td>'.$dt_bar->nama_user.'</td>
                   <td>'.$dt_bar->alamat.'</td>
-                  <td>'.$dt_bar->total_bayar.'</td>
+                  <td>'.$dt_bar->nama_laundry.'</td>
                   <td><a href="#" data-toggle="modal" onclick="prepare_ubah_user('.$dt_bar->id_transaksi.')" data-target="#update" >'.$dt_bar->status_pesan.'</a></td>
                    <td><a href="'.base_url('index.php/order/hapus_order/'.$dt_bar->id_transaksi).'" onclick="return confirm(\'anda yakin?\')" >Delete</a></td>
                </tr>';

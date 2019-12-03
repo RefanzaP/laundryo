@@ -27,7 +27,7 @@
                   <td>'.$dt_bar->id_transaksi.'</td>
                   <td>'.$dt_bar->nama_user.'</td>
                   <td>'.$dt_bar->alamat.'</td>
-                  <td>'.$dt_bar->total_bayar.'</td>
+                  <td>'.$dt_bar->qty.'</td>
                   <td>'.$dt_bar->status_pesan.'</td>
                    <td><a href="'.base_url('index.php/order_selesai/hapus_order/'.$dt_bar->id_transaksi).'" onclick="return confirm(\'anda yakin?\')" >Delete</a></td>
                </tr>';

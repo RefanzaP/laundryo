@@ -36,9 +36,15 @@ class order_model extends CI_Model
 
       $query = $this->db->get('jenis_paket')->result();
       return $query;
-    
+
   }
 
+  public function get_status(){
+
+      $query = $this->db->get('status')->result();
+      return $query;
+
+  }
   function ambil_data($perpage,$offset)
     {
 
@@ -77,6 +83,7 @@ class order_model extends CI_Model
     $data_topik=array(
         'tanggal_pesan' => $now,
         'id_pelanggan'  => $this->input->post('id_pelanggan'),
+        'id_jenis_paket'  => $this->input->post('id_jenis_paket'),
         'id_laundry'  => $this->input->post('id_laundry'),
         'id_pakaian'  => $this->input->post('id_pakaian'),
         'qty'           => $this->input->post('qty'),
