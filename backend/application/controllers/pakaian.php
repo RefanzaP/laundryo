@@ -28,10 +28,10 @@ class pakaian extends CI_Controller
   }
 
   public function update(){
-    $this->form_validation->set_rules('id_jenis_paket', 'Jenis Paket', 'trim|required');
-    $this->form_validation->set_rules('jenis_pakaian', 'Jenis Pakaian', 'trim|required');
-    $this->form_validation->set_rules('harga_pakaian', 'Harga', 'trim|required|numeric');
-    $this->form_validation->set_rules('keterangan', 'keterangan', 'trim|required');
+    $this->form_validation->set_rules('ubah_id_jenis_paket', 'Jenis Paket', 'trim|required');
+    $this->form_validation->set_rules('ubah_jenis_pakaian', 'Jenis Pakaian', 'trim|required');
+    $this->form_validation->set_rules('ubah_harga_pakaian', 'Harga', 'trim|required|numeric');
+    $this->form_validation->set_rules('ubah_keterangan', 'keterangan', 'trim|required');
 
           if ($this->form_validation->run() == TRUE ){
             if ($this->pakaian_model->update() == TRUE ){

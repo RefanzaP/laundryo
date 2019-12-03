@@ -55,7 +55,7 @@
           Nama pakaian
           <input id="jenis_pakaian" type="text" name="jenis_pakaian" class="form-control" placeholder="jenis pakaian"><br>
           Harga pakaian
-          <input id="harga_pakaian" type="text" name="harga_pakaian" class="form-control" placeholder="harga pakaian"><br>
+          <input id="harga_pakaian" type="number" max="1000000" name="harga_pakaian" class="form-control" placeholder="harga pakaian"><br>
           Keterangan
           <input id="keterangan" type="text" name="keterangan" class="form-control" placeholder=" Keterangan pakaian"><br>
           Pilih Jenis Paket
@@ -97,7 +97,7 @@
         Nama pakaian
         <input id="ubah_jenis_pakaian" type="text" name="ubah_jenis_pakaian" class="form-control" placeholder="jenis pakaian"><br>
         Harga pakaian
-        <input id="ubah_harga_pakaian" type="text" name="ubah_harga_pakaian" class="form-control" placeholder="harga pakaian"><br>
+        <input id="ubah_harga_pakaian" type="numeric" name="ubah_harga_pakaian" class="form-control" placeholder="harga pakaian"><br>
         Keterangan
         <input id="ubah_keterangan" type="text" name="ubah_keterangan" class="form-control" placeholder=" Keterangan pakaian"><br>
         Pilih Jenis Paket
