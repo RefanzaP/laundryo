@@ -68,27 +68,23 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav mx-auto text-center">
 						<li class="nav-item active  mr-3">
-						<a class="nav-link" href="<?=base_url()?>index.php/dashboard">Home 
-								<span class="sr-only">(current)</span>
-							</a>
+							<a class="nav-link" href="<?=base_url()?>index.php/dashboard">Home</a>
 						</li>
 						<li class="nav-item  mr-3">
 							<a class="nav-link scroll" href="#about">about</a>
 						</li>
-						
+
 						<li class="nav-item">
 							<a class="nav-link scroll" href="#contact">contact</a>
 						</li>
 
-						<li class="nav-item">
-							<a class="nav-link" href="<?=base_url()?>index.php/cart">Trasaksi</a>
-						</li>
+							<a class="nav-link scroll" href="<?php echo base_url()?>index.php/transaksi">Transaksi</a>
+							<li class="nav-item">
+								<a class="nav-link scroll" href="<?=base_url()?>index.php/dashboard"> Hi! <?php echo $this->session->userdata('username');?></a>
+							</li>
 
 					</ul>
-					<button type="button" class="btn btn-info btn-lg-block w3ls-btn px-4 text-uppercase font-weight-bold" data-toggle="modal"
-					    aria-pressed="false" data-target="#exampleModal">
-						order
-					</button>
+
 
 				</div>
 			</nav>
@@ -96,108 +92,132 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 	</header>
 	<!-- //header -->
 	<!--services-->
-	<div class="agileits-services py-md-7 py-5" id="services">
-		<div class="container">
-			<h3 class="w3ls-title text-center text-capitalize pb-md-10 pb-8">List Harga Laundry Satuan</h3>
-			<br><br>
-			<div class="agileits-services-row row">
+
+	<div class="normal-table-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="normal-table-list mg-t-30">
+                        <div class="basic-tb-hd">
+                            <h2>Transaksi Saya</h2>
+                            <button href="#tambah" class="" data-toggle="modal" style="margin-left:1000px; width: 100px"></button>
+                             <?php
+                                $notif = $this->session->flashdata('notif');
+                                if($notif != NULL){
+                                    echo ' <div class="alert alert-danger">'.$notif.'</div>';
+                                }
+                            ?>
+                        </div>
+                        <div class="bsc-tbl-st">
+                            <table class="table table-striped">
+                                <thead>
+																				<th>Transaksi</th>
+                                        <th>Jenis Pakaian</th>
+																					<th> Diambil Oleh</th>
+																					<th> Tempat Laundry</th>
+																				<th>Tanggal & Waktu Pesan</th>
+																				<th>Jenis Paket</th>
+                                        <th>Total Harga</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                <?php $no=0; foreach($arr as $t):
+                                 $no++; ?>
+                                <tr>
+
+                                <td><?= $t->id_transaksi ?></td>
+                                <td><?= $t->jenis_pakaian?></td>
+																  <td><?= $t->nama?></td>
+                                <td><?= $t->nama_laundry?></td>
+																  <td><?= $t->tanggal_pesan?></td>
+																	 <td><?= $t->nama_paket?></td>
+                                <td><?= $t->qty * $t->harga_pakaian + $t->harga?></td>
+
+                                <?php endforeach ?>
 
 
-			<div class="wrap-table100">
-					<div class="table">
+                                </tbody>
+                            </table>
+                            <br>
 
-						<div class="row header">
-							<div class="cell">
-								Jenis Pakaian
-							</div>
-							<div class="cell">
-								Harga Reguler
-							</div>
-							<div class="cell">
-								Harga Express
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="cell" data-title="Full Name">
-								Jeans
-							</div>
-							<div class="cell" data-title="Age">
-								5000
-							</div>
-							<div class="cell" data-title="Job Title">
-								8000
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="cell" data-title="Full Name">
-								Non Jeans
-							</div>
-							<div class="cell" data-title="Age">
-								5000
-							</div>
-							<div class="cell" data-title="Job Title">
-								8000
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="cell" data-title="Full Name">
-								Selimut
-							</div>
-							<div class="cell" data-title="Age">
-								5000
-							</div>
-							<div class="cell" data-title="Job Title">
-								8000
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="cell" data-title="Full Name">
-								Sprei
-							</div>
-							<div class="cell" data-title="Age">
-								5000
-							</div>
-							<div class="cell" data-title="Job Title">
-								8000
-							</div>
-						</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.modal tambah -->
+<div class="modal fade" id="tambah">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title"></h4>
+      </div>
+      <div class="modal-body">
+        <form action="<?= base_url('index.php/cart/nambah')?>" method="post" enctype="multipart/form-data">
+            <label>Jenis Pakaian</label>
+            <input type="text" name="nama_stok" placeholder="Isi Jenis Pakaian"  class="form-control">
+            <label>Laundry</label>
+            <input type="text" name="laundry" placeholder="laundry"  class="form-control">
+						<label>Jumlah</label>
+						<input type="text" name="jumlah" placeholder="jumlah"  class="form-control">
+            <label>Harga</label>
+            <input type="text" name="harga" placeholder="harga"  class="form-control">
+            </select>
+         <br><br>
+             <button type="submit" name="simpan" value="Simpan" class="btn btn-success">Simpan</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </form>
+      </div>
+      <div class="modal-footer">
 
 
-						<div class="row">
-							<div class="cell" data-title="Full Name">
-								Handuk
-							</div>
-							<div class="cell" data-title="Age">
-								5000
-							</div>
-							<div class="cell" data-title="Job Title">
-								8000
-							</div>
-						</div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+</div>
+ <!-- /.modal ubah -->
+<div class="modal fade" id="ubah">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Ubah Data</h4>
+      </div>
+      <div class="modal-body">
+        <form action="<?= base_url('index.php/cart/update')?>" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="id_stok" id="id_stok">
+            <label>Jenis Pakaian</label>
+            <input type="text" name="nama_stok" id="nama_stok" placeholder="nama stok"  class="form-control">
+            <label>Laundry</label>
+            <input type="text" name="laundry" id="laundry" placeholder="laundry"  class="form-control">
+						<label>Jumlah</label>
+            <input type="text" name="jumlah" id="jumlah" placeholder="jumlah"  class="form-control">
+            <label>Harga</label>
+            <input type="text" name="harga" id="harga" placeholder="harga"  class="form-control">
+            Gambar
+            <input type="file" name="gambar" id="gambar" class="form-control"><br>
+            <label>Kategori</label>
+            <select class="form-control" name="id_kategori" id="id_kategori">
+
+            </select><br>
+           <br>
+             <button type="submit" name="simpan" value="Simpan" class="btn btn-success">Simpan</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </form>
+      </div>
+      <div class="modal-footer">
 
 
-						<div class="row">
-							<div class="cell" data-title="Full Name">
-								Boneka
-							</div>
-							<div class="cell" data-title="Age">
-								5000
-							</div>
-							<div class="cell" data-title="Job Title">
-								8000
-							</div>
-						</div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+</div>
 
-			</div>
-		</div>
-	</div>
-			</div>
-		</div>
-	</div>
+
 	<!-- //services-->
 	<!-- slide -->
 	<section class="wthree-row py-sm-5 py-3 slide-bg bg-dark">

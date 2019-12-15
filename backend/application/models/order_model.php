@@ -62,6 +62,7 @@ class order_model extends CI_Model
   {
     $data = array(
       'id_status_t' => $this->input->post('ubah_id_status'),
+      'id_user' => $_SESSION['id_user'],
         );
         return $this->db->where('id_transaksi', $this->input->post('ubah_id_transaksi'))
                         ->update('transaksi', $data);

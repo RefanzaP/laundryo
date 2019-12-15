@@ -6,16 +6,17 @@ class dashboard extends CI_Controller
 
     public function __construct(){
       parent::__construct();
-
-    }
+      $this->load->model('cart_model');
+      }
 
     public function index(){
-      $this->load->model('order_model');
-      $data['data_pakaian']=$this->order_model->get_pakaian();
-      $this->load->model('order_model');
-      $data['data_paket']=$this->order_model->get_jenis();
-
-    $this->load->view('template');
+      $this->load->model('cart_model');
+      $data['data_pakaian'] = $this->cart_model->get_pakaian();
+      $this->load->model('cart_model');
+      $data['data_paket'] = $this->cart_model->get_paket();
+      $this->load->model('cart_model');
+      $data['data_laundry'] = $this->cart_model->get_laundry();
+    $this->load->view('template',$data);
   }
 
   public function add(){

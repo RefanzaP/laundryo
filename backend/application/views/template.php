@@ -107,11 +107,11 @@
                                         <ul class="collapse">
                                       <li><a href="<?php echo base_url();?>index.php/order" aria-expanded="true"><span>Order Pending</span></a>
                                         </li>
-                                        <li><a href="<?php echo base_url();?>index.php/order_diterima" aria-expanded="true"><span>Order Diterima</span></a>
+                                        <li><a href="<?php echo base_url();?>index.php/order_diterima" aria-expanded="true"><span>Order Diambil</span></a>
                                           </li>
                                         <li><a href="<?php echo base_url();?>index.php/order_dikerjakan" aria-expanded="true"><span>Order Dikerjakan</span></a>
                                           </li>
-                                          <li><a href="<?php echo base_url();?>index.php/order_dikirim" aria-expanded="true"><span>Order Dikirim</span></a>
+                                          <li><a href="<?php echo base_url();?>index.php/order_dikirim" aria-expanded="true"><span>Order Diantar</span></a>
                                           </li>
                                         <li><a href="<?php echo base_url();?>index.php/order_selesai" aria-expanded="true"><span>Order Selesai</span></a>
                                           </li>

@@ -115,26 +115,26 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<h3 class="w3ls-title text-center text-capitalize pb-md-5 pb-4">what we do</h3>
 			<div class="agileits-services-row row py-md-5 pb-5">
-				<div class="col-lg-3 col-md-6 agileits-services-grids">
+			<div class="col-lg-3 col-md-6 agileits-services-grids">
 					<span class="fab fa-uniregistry p-4"></span>
 					<h4 class="mt-2 mb-3">Commercial Service</h4>
-					<p>Itaque earum rerum hic tenetur a sapiente delectus reiciendis maiores alias consequatur aut</p>
+					<p>Professional Dry Cleaning Service at an Affordable price</p>
 				</div>
 				<div class="col-lg-3 col-md-6 agileits-services-grids mt-md-0 mt-3">
 					<span class="fab fa-jenkins p-4"></span>
 					<h4 class="mt-2 mb-3">Self Service</h4>
-					<p>Itaque earum rerum hic tenetur a sapiente delectus reiciendis maiores alias consequatur aut</p>
+					<p>Wash, Dry, Fold/Iron and neatly package your laundry</p>
 				</div>
 
 				<div class="col-lg-3 col-md-6 agileits-services-grids mt-lg-0 mt-3">
 					<span class="fab fa-schlix p-4"></span>
 					<h4 class="mt-2 mb-3">Faster Service</h4>
-					<p>Itaque earum rerum hic tenetur a sapiente delectus reiciendis maiores alias consequatur aut</p>
+					<p>Home Pick-up service at a push of a button via Mobile App or website</p>
 				</div>
 				<div class="col-lg-3 col-md-6 agileits-services-grids mt-lg-0 mt-3">
 					<span class="fas fa-magic p-4"></span>
 					<h4 class="mt-2 mb-3">Stain Removal</h4>
-					<p>Itaque earum rerum hic tenetur a sapiente delectus reiciendis maiores alias consequatur aut</p>
+					<p>Door-step delivery upon completion at your convenience.</p>
 				</div>
 			</div>
 		</div>
@@ -322,7 +322,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 						<form action="#" method="get" class="f-color">
 							<section class="call-us" >
 								<div class="call">CALL US</div>
-								<div class="call-phone">09458 181 990, 09458 181 980</div>
+								<div class="call">09458 181 990, 09458 181 980</div>
 							</section>
 			
 						</form>
@@ -343,8 +343,8 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				<h3 class="agile-title text-capitalize text-white">go laundry!</h3>
 				<span class="w3-line"></span>
 				<h5 class="agile-title text-capitalize pt-4">trust us, we save your time.</h5>
-				<p class="text-light py-sm-4 py-2">Aliquam ac est vel nisl condimentum interdum vel eget enim. Curabitur mattis orci sed leo mattis, nec maximus nibh faucibus.
-					Mauris et justo vel nibh rhoncus venenatis. Nullal condimentum interdum vel eget enim. Curabitur mattis orci sed le.
+				<p class="text-light py-sm-4 py-2">Laundry-O is the first-ever on-demand laundry App. We take care of your laundry and dry cleaning with a push of a button from your phone or through our website. We strive to make cleaning your clothes a seamless experience and we will cater to your schedule, come straight to your door to pick up and deliver your laundry at affordable prices. With exclusive partnership
+				 with Shine Laundry, we guaranteed to provide the most professional service that you can experience in Myanmar.
 				</p>
 				<a href="#" class="text-uppercase serv_link align-self-center bg-light btn px-4">read more</a>
 			</div>

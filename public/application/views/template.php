@@ -55,7 +55,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 							</a>
 						</li>
 						<li class="nav-item  mr-3">
-							<a class="nav-link scroll" href="#about">about</a>
+						<a class="nav-link scroll" href="#about">About</a>
 						</li>
 						<!-- <li class="nav-item dropdown mr-3">
 							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
@@ -70,7 +70,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 								<a class="dropdown-item scroll" href="#pricing">Pricing Plans</a>
 								<a class="dropdown-item" href="<?=base_url()?>index.php/harga">List Harga</a>
 								<a class="dropdown-item scroll" href="#testimonials">Testimonials</a>
-							</div>
+							</div>3
 						</li> -->
 						<li class="nav-item">
 							<a class="nav-link scroll" href="#contact">contact</a>
@@ -84,7 +84,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 								<a class="" href="<?php echo base_url('index.php/logout');?>">Logout</a>
 								<div class="dropdown-divider"></div>
-								<a href="<?=base_url()?>index.php/transaksi">Transaksi Saya</a>
+								<a href="<?=base_url()?>index.php/harga">List Harga</a>
 							</li>
 							 <!-- <a class="nav-link scroll" aria-pressed="false" > Hi! <?php echo $this->session->userdata('username');?> </a> -->
 					<?php } else {?>
@@ -94,10 +94,12 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					<?php }?>
 					</ul>
 					<?php if(!empty($_SESSION['username'])){ ?>
+						<div style="margin-right:15px"><a href="<?php echo base_url()?>index.php/cart"><img src="<?php echo base_url();?>assets/images/shopping-cart32.png" alt="logo"></a></div>
 					<button type="button" class="btn btn-info btn-lg-block w3ls-btn px-4 text-uppercase font-weight-bold" data-toggle="modal"
 					    aria-pressed="false" data-target="#exampleModal">
 						order
 					</button>
+
 				<?php } else {}?>
 				</div>
 			</nav>
@@ -111,7 +113,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					<ul class="rslides" id="slider3">
 						<li>
 							<div class="slider-info">
-								<h3 class="text-capitalize">We care for all your valued garments </h3>
+								<h3 class="text-capitalize">Welcome to Laundry-O </h3>
 								<a class="btn btn-primary  mt-4 text-capitalize scroll" href="#about" role="button">read more</a>
 							</div>
 						</li>
@@ -162,23 +164,23 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				<div class="col-lg-3 col-md-6 agileits-services-grids">
 					<span class="fab fa-uniregistry p-4"></span>
 					<h4 class="mt-2 mb-3">Commercial Service</h4>
-					<p>Itaque earum rerum hic tenetur a sapiente delectus reiciendis maiores alias consequatur aut</p>
+					<p>Professional Dry Cleaning Service at an Affordable price</p>
 				</div>
 				<div class="col-lg-3 col-md-6 agileits-services-grids mt-md-0 mt-3">
 					<span class="fab fa-jenkins p-4"></span>
 					<h4 class="mt-2 mb-3">Self Service</h4>
-					<p>Itaque earum rerum hic tenetur a sapiente delectus reiciendis maiores alias consequatur aut</p>
+					<p>Wash, Dry, Fold/Iron and neatly package your laundry</p>
 				</div>
 
 				<div class="col-lg-3 col-md-6 agileits-services-grids mt-lg-0 mt-3">
 					<span class="fab fa-schlix p-4"></span>
 					<h4 class="mt-2 mb-3">Faster Service</h4>
-					<p>Itaque earum rerum hic tenetur a sapiente delectus reiciendis maiores alias consequatur aut</p>
+					<p>Home Pick-up service at a push of a button via Mobile App or website</p>
 				</div>
 				<div class="col-lg-3 col-md-6 agileits-services-grids mt-lg-0 mt-3">
 					<span class="fas fa-magic p-4"></span>
 					<h4 class="mt-2 mb-3">Stain Removal</h4>
-					<p>Itaque earum rerum hic tenetur a sapiente delectus reiciendis maiores alias consequatur aut</p>
+					<p>Door-step delivery upon completion at your convenience.</p>
 				</div>
 			</div>
 		</div>
@@ -223,149 +225,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</section>
 	<!-- //stats -->
-	<!-- team -->
-	<section class="wthree-row py-5" id="team">
-		<div class="container py-md-5 py-3">
-			<div class="py-md-5 py-3 bg-pricemain text-center">
-				<h3 class="w3ls-title text-center text-capitalize pb-md-5 pb-4">meet our team</h3>
-			</div>
-			<div class="row">
-				<div class="col-lg-3 col-sm-6 team-grids">
-					<div class="team-effect">
-						<img src="<?=base_url()?>assets/images/t1.jpg" alt="img" class="img-responsive">
-					</div>
-					<!-- team text -->
-					<div class="footerv2-w3ls mt-3">
-						<h4>John Smith</h4>
-						<p>Creative Director</p>
-						<ul class="social-iconsv2 agileinfo">
-							<li>
-								<a href="#">
-									<i class="fab fa-facebook-f"></i>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<i class="fab fa-twitter"></i>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<i class="fab fa-google-plus-g"></i>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<i class="fab fa-linkedin-in"></i>
-								</a>
-							</li>
-						</ul>
-					</div>
-					<!-- //team text -->
-				</div>
-				<div class="col-lg-3 col-sm-6 team-grids mt-sm-0 mt-5">
-					<div class="team-effect">
-						<img src="<?=base_url()?>assets/images/t3.jpg" alt="img" class="img-responsive">
-					</div>
-					<!-- team text -->
-					<div class="footerv2-w3ls mt-3">
-						<h4>Thomson Doe</h4>
-						<p>Chairman</p>
-						<ul class="social-iconsv2 agileinfo">
-							<li>
-								<a href="#">
-									<i class="fab fa-facebook-f"></i>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<i class="fab fa-twitter"></i>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<i class="fab fa-google-plus-g"></i>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<i class="fab fa-linkedin-in"></i>
-								</a>
-							</li>
-						</ul>
-					</div>
-					<!-- //team text -->
-				</div>
-				<div class="col-lg-3 col-sm-6 team-grids mt-lg-0 mt-5">
-					<div class="team-effect">
-						<img src="<?=base_url()?>assets/images/t2.jpg" alt="img" class="img-responsive">
-					</div>
-					<!-- team text -->
-					<div class="footerv2-w3ls mt-3">
-						<h4>Smith Kevin</h4>
-						<p>Executive Manager</p>
-						<ul class="social-iconsv2 agileinfo">
-							<li>
-								<a href="#">
-									<i class="fab fa-facebook-f"></i>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<i class="fab fa-twitter"></i>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<i class="fab fa-google-plus-g"></i>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<i class="fab fa-linkedin-in"></i>
-								</a>
-							</li>
-						</ul>
-					</div>
-					<!-- //team text -->
-				</div>
-				<div class="col-lg-3 col-sm-6 team-grids mt-lg-0 mt-5">
-					<div class="team-effect">
-						<img src="<?=base_url()?>assets/images/t4.jpg" alt="img" class="img-responsive">
-					</div>
-					<!-- team text -->
-					<div class="footerv2-w3ls mt-3">
-						<h4>Laura Hill</h4>
-						<p>HR Manager</p>
-						<ul class="social-iconsv2 agileinfo">
-							<li>
-								<a href="#">
-									<i class="fab fa-facebook-f"></i>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<i class="fab fa-twitter"></i>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<i class="fab fa-google-plus-g"></i>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<i class="fab fa-linkedin-in"></i>
-								</a>
-							</li>
-						</ul>
-					</div>
-					<!-- //team text -->
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- //team -->
+
 	<!-- gallery -->
 	<div class="gallery  py-md-5 py-3" id="gallery">
 		<div class="container">
@@ -448,7 +308,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 			<h3 class="w3ls-title text-center text-capitalize pb-md-5 pb-4">Pricing Plans</h3>
 			<div class="row pb-5">
 				<div class="col-lg-3 col-md-6 text-center  pb-0 pt-3 px-3 agile-pricegrid">
-					<div class="bg-price py-sm-3 rounded-top text-center">
+					<!-- <div class="bg-price py-sm-3 rounded-top text-center">
 						<h4>Basic</h4>
 						<span class="mx-auto my-2"></span>
 					</div>
@@ -466,7 +326,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					</ul>
 					<div class="py-3 px-2">
 						<button type="button" class="btn btn-info btn-lg btn-block text-md-center" data-toggle="modal" aria-pressed="false" data-target="#exampleModal">Get Started</button>
-					</div>
+					</div> -->
 				</div>
 				<div class="col-lg-3 col-md-6 text-center pb-0 pt-3 px-3 agile-pricegrid">
 					<div class="bg-price py-sm-3 rounded-top text-center">
@@ -475,15 +335,15 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="p-3">
 						<h5 class="pt-2">
-							<sup>$</sup>69</h5>
-						<span>per month</span>
+							<sup></sup>FREE</h5>
+						<span></span>
 					</div>
 					<ul class="list-group-flush">
-						<li class="list-group-item">Cras justo odio</li>
-						<li class="list-group-item">Dapibus ac facilisis in</li>
-						<li class="list-group-item">Morbi leo risus</li>
-						<li class="list-group-item">Cras justo odio</li>
-						<li class="list-group-item">Porta ac consectetur ac</li>
+						<li class="list-group-item">Bersih</li>
+						<li class="list-group-item">Wangi</li>
+						<li class="list-group-item">Rapi</li>
+						<li class="list-group-item">Praktis</li>
+						<li class="list-group-item">Efisien</li>
 					</ul>
 					<div class="py-3 px-2">
 						<button type="button" class="btn btn-info btn-lg btn-block" data-toggle="modal" aria-pressed="false" data-target="#exampleModal">Get Started</button>
@@ -491,27 +351,27 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<div class="col-lg-3 col-md-6 text-center p-3  agile-pricegrid">
 					<div class="bg-price py-sm-3 rounded-top text-center">
-						<h4>Mega</h4>
+						<h4>Express</h4>
 						<span class="mx-auto my-2"></span>
 					</div>
 					<div class="p-3">
 						<h5 class="pt-2">
-							<sup>$</sup>99</h5>
-						<span>per month</span>
+							<sup>Rp</sup>5000</h5>
+						<span></span>
 					</div>
 					<ul class="list-group-flush">
-						<li class="list-group-item">Cras justo odio</li>
-						<li class="list-group-item">Dapibus ac facilisis in</li>
-						<li class="list-group-item">Morbi leo risus</li>
-						<li class="list-group-item">Cras justo odio</li>
-						<li class="list-group-item">Porta ac consectetur ac</li>
+						<li class="list-group-item">Cepat</li>
+						<li class="list-group-item">Pengerjaan dalam 1 hari</li>
+						<li class="list-group-item">Bersih</li>
+						<li class="list-group-item">Wangi</li>
+						<li class="list-group-item">Rapi</li>
 					</ul>
 					<div class="py-3 px-2">
 						<button type="button" class="btn btn-info btn-lg btn-block" data-toggle="modal" aria-pressed="false" data-target="#exampleModal">Get Started</button>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 text-center pb-0 pt-3 px-3 agile-pricegrid">
-					<div class="bg-price py-sm-3 rounded-top text-center">
+					<!-- <div class="bg-price py-sm-3 rounded-top text-center">
 						<h4>Combo</h4>
 						<span class="mx-auto my-2"></span>
 					</div>
@@ -529,7 +389,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					</ul>
 					<div class="py-3 px-2">
 						<button type="button" class="btn btn-info btn-lg btn-block" data-toggle="modal" aria-pressed="false" data-target="#exampleModal">Get Started</button>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
@@ -549,8 +409,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 							</div>
 							<div class="test-review test-tooltip1">
 								<p class="mx-auto mt-3 text-white">
-									<i class="fa fa-quote-left" aria-hidden="true"></i> Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-									sed diam voluptua.
+									<i class="fa fa-quote-left" aria-hidden="true"></i> sangat membantu, ditengah kesibukan saya sebagai pekerja kantoran.
 									<i class="fa fa-quote-right" aria-hidden="true"></i>
 								</p>
 							</div>
@@ -562,8 +421,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 							</div>
 							<div class="test-review test-tooltip1">
 								<p class="mx-auto mt-3 text-white">
-									<i class="fa fa-quote-left" aria-hidden="true"></i> Polite sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-									diam voluptua.
+									<i class="fa fa-quote-left" aria-hidden="true"></i> sangat membantu saya yang tidak memiliki kendaraan untuk mengambil
 									<i class="fa fa-quote-right" aria-hidden="true"></i>
 								</p>
 							</div>
@@ -571,12 +429,11 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 						<div class="item-owl">
 							<div class="img-agile">
 								<i class="fas fa-user"></i>
-								<h6 class="mt-3 text-white">Riya Allen</h6>
+								<h6 class="mt-3 text-white">Nabila Rahma</h6>
 							</div>
 							<div class="test-review test-tooltip1">
 								<p class="mx-auto mt-3 text-white">
-									<i class="fa fa-quote-left" aria-hidden="true"></i> Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-									sed diam voluptua.
+									<i class="fa fa-quote-left" aria-hidden="true"></i>cepat, bersih, dan rapi sangat memuaskan
 									<i class="fa fa-quote-right" aria-hidden="true"></i>
 								</p>
 							</div>
@@ -644,8 +501,8 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				<h3 class="agile-title text-capitalize text-white">go laundry!</h3>
 				<span class="w3-line"></span>
 				<h5 class="agile-title text-capitalize pt-4">trust us, we save your time.</h5>
-				<p class="text-light py-sm-4 py-2">Aliquam ac est vel nisl condimentum interdum vel eget enim. Curabitur mattis orci sed leo mattis, nec maximus nibh faucibus.
-					Mauris et justo vel nibh rhoncus venenatis. Nullal condimentum interdum vel eget enim. Curabitur mattis orci sed le.
+				<p class="text-light py-sm-4 py-2">Laundry-O is the first-ever on-demand laundry App. We take care of your laundry and dry cleaning with a push of a button from your phone or through our website. We strive to make cleaning your clothes a seamless experience and we will cater to your schedule, come straight to your door to pick up and deliver your laundry at affordable prices. With exclusive partnership
+				 with Laundry-O, we guaranteed to provide the most professional service that you can get a good experience.
 				</p>
 				<a href="#" class="text-uppercase serv_link align-self-center bg-light btn px-4">read more</a>
 			</div>
@@ -788,42 +645,56 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					</button>
 				</div>
 				<div class="modal-body">
-					<form action="<?php echo base_url() ?>index.php/order/add" method="post" enctype="multipart/form-data">
+					<form action="<?php echo base_url() ?>index.php/cart/add" method="post" enctype="multipart/form-data">
 						<div class="form-group">
-							  <input type="hidden" name="id_transaksi" >
+							 <input type="hidden" name="id_transaksi" >
 							<label for="recipient-name" class="col-form-label">Jenis Pakaian</label>
-							<select name="id_pakaian" class="form-control" >
-                <?php
-                foreach($data_pakaian as $d) {
-                  echo "<option value='".$d->id_pakaian."'>".$d->jenis_pakaian."</option>";
-                }
-                ?></select>
-						</div>
+		          <select name="id_pakaian" id="id_pakaian" class="form-control" >
+								<option value="disabled">-- None --</option>
+							  <?php
+		            foreach($data_pakaian as $d) {
+		              echo "<option value='".$d->id_pakaian."'>".$d->jenis_pakaian."</option>";
+		            }
+		            ?></select>
+		         <label for="recipient-name" class="col-form-label">Pilih Tempat Laundry</label>
+		          <select name="id_laundry" id="id_laundry" class="form-control" >
+								<option value="disabled">-- None --</option>
+								<?php
+		            foreach($data_laundry as $d) {
+		              echo "<option value='".$d->id_laundry."'>".$d->nama_laundry."</option>";
+		            }
+		            ?></select>
+
 						<div class="form-group">
-						<label for="recipient-name" class="col-form-label">Jenis Paket</label>
-							<select type="text" class="form-control" placeholder=" " name="Name" id="recipient-name" required="">
-								<option value="">Reguler</option>
-								<option value="">Express</option>
-							</select>
-						</div>
+							<label for="recipient-name" class="col-form-label">Jenis Paket</label>
+								<select name="id_jenis_paket" id="id_jenis_paket" class="form-control" >
+									<option value="disabled">-- None --</option>
+									<?php
+									foreach($data_paket as $d) {
+										echo "
+										<option value='".$d->id_jenis_paket."'>".$d->nama_paket."</option>";
+									}
+									?></select>
 						<div class="form-group">
 							<label class="mr-2 col-form-label">Jumlah</label>
-							<input type="number" class="form-control" name="Jumlah" required="">
+							<input type="number" class="form-control" name="qty" id="qty"required="">
 						</div>
-						<div class="form-group">
-							<label class="mr-2 col-form-label">Delivery </label>
-							<input id="datepicker2" name="check out" type="text" value="mm/dd/yyyy" class="form-control" required="">
-						</div>
-
 						<div class="right-w3l">
-							<input type="submit" class="form-control" value="pick my laundry">
+							<input type="submit" name="simpan" value="Simpan"class="form-control" onclick="myFunction()">
 						</div>
-					</form>
-
 				</div>
+					</form>
 			</div>
 		</div>
 	</div>
+	<?php if($this->session->flashdata('pesan')!=null): ?>
+			 <div class= "alert alert-success"><?= $this->session->flashdata('pesan');?></div>
+		<?php endif?>
+
+
+
+
+
 	<!-- //order modal -->
 	<!-- js-->
 	<script src="<?=base_url()?>assets/js/jquery-2.2.3.min.js"></script>
@@ -849,6 +720,12 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 			});
 
 		});
+	</script>
+		<!-- onclick -->
+	<script type="text/javascript">
+		function myFunction(){
+			alert("Hasil Order tidak akan bisa diubah! Anda yakin?")
+		}
 	</script>
 	<!-- //Banner text  Responsiveslides -->
 	<!-- start-smooth-scrolling -->
@@ -934,6 +811,47 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 	<!-- Bootstrap Core JavaScript -->
 	<script src="<?=base_url()?>assets/js/bootstrap.js ">
 	</script>
+
+
+	<!-- Cart-->
+	<!-- <script type="text/javascript" src="<?php echo base_url().'assets/js/jquery-2.2.3.min.js'?>"></script>
+	<script type="text/javascript" src="<?php echo base_url().'assets/js/bootstrap.js'?>"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+	$('.add_cart').click(function(){
+	var produk_id_transaksi   = $(this).data("produk_id_transaksi");
+	var produk_id_pakaian  = $(this).data("produk_id_pakaian");
+	var produk_id_laundry = $(this).data("produk_id_laundry");
+	var produk_id_jenis_paket = $(this).data("produk_id_jenis_paket");
+
+	var qty     = $('#' + produk_id).val();
+	$.ajax({
+	url : "<?php echo base_url();?>index.php/cart/add",
+	method : "POST",
+	data : {produk_id_transaksi: produk_id_transaksi, produk_id_pakaian: produk_id_laundry, produk_id_jenis_paket:  qty: qty},
+	success: function(data){
+	$('#detail_cart').html(data);
+}
+});
+});
+
+// Load shopping cart
+$('#detail_cart').load("<?php echo base_url();?>index.php/cart/load_cart");
+
+//Hapus Item Cart
+$(document).on('click','.hapus_cart',function(){
+var row_id=$(this).attr("id"); //mengambil row_id dari artibut id
+$.ajax({
+url : "<?php echo base_url();?>cart/hapus_cart",
+method : "POST",
+data : {row_id : row_id},
+success :function(data){
+$('#detail_cart').html(data);
+}
+});
+});
+});
+</script> -->
 	<!-- //Bootstrap Core JavaScript -->
 </body>
 

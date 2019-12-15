@@ -52,48 +52,12 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 
 <body>
 	<!-- header -->
-	<!DOCTYPE HTML>
-<html lang="zxx">
-
-<head>
-	<title>Laundry-O</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="utf-8">
-	<meta name="keywords" content="Go Laundry Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
-SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-	<script>
-		addEventListener("load", function () {
-			setTimeout(hideURLbar, 0);
-		}, false);
-
-		function hideURLbar() {
-			window.scrollTo(0, 1);
-		}
-	</script>
-
-	<!-- Bootstrap Core CSS -->
-	<link href="<?=base_url()?>assets/css/bootstrap.css" rel='stylesheet' type='text/css' />
-	<!-- gallery css -->
-	<link rel="stylesheet" href="<?=base_url()?>assets/css/swipebox.css">
-	<!-- Custom CSS -->
-	<link href="<?=base_url()?>assets/css/style.css" rel='stylesheet' type='text/css' />
-	<!-- font-awesome icons -->
-	<link href="<?=base_url()?>assets/css/fontawesome-all.min.css" rel="stylesheet">
-	<!-- //Custom Theme files -->
-	<!--webfonts-->
-	<link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
-	    rel="stylesheet">
-	<!--//webfonts-->
-</head>
-
-<body>
-	<!-- header -->
 	<header>
 		<div class="container">
 			<nav class="navbar navbar-expand-lg navbar-light">
 				<a class="navbar-brand" href="index.html">
 
-					<img src="<?=base_url()?>assets/images/logo.png" width="80" heigth="80" href="<?=base_url()?>">
+					<img src="<?=base_url()?>assets/images/logo.png" width="80" heigth="80">
 
 				</a>
 				<button class="navbar-toggler ml-md-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -104,33 +68,21 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav mx-auto text-center">
 						<li class="nav-item active  mr-3">
-							<a class="nav-link" href="<?=base_url()?>index.php/dashboard">Home
-								<span class="sr-only">(current)</span>
-							</a>
+							<a class="nav-link" href="<?=base_url()?>index.php/dashboard">Home</a>
 						</li>
 						<li class="nav-item  mr-3">
-							<a class="nav-link" href="<?=base_url()?>index.php/about">about</a>
+							<a class="nav-link scroll" href="#about">about</a>
 						</li>
-						<li class="nav-item dropdown mr-3">
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-							    aria-expanded="false">
-								Dropdown
-							</a>
-							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item scroll" href="#services">Services</a>
-								<a class="dropdown-item scroll" href="#team">Team</a>
-								<a class="dropdown-item scroll" href="#gallery">Gallery</a>
-								<div class="dropdown-divider"></div>
-								<a class="dropdown-item scroll" href="#pricing">Pricing Plans</a>
-								<a class="dropdown-item" href="<?=base_url()?>index.php/harga">List Harga</a>
-								<a class="dropdown-item scroll" href="#testimonials">Testimonials</a>
-							</div>
-						</li>
+
 						<li class="nav-item">
 							<a class="nav-link scroll" href="#contact">contact</a>
 						</li>
+
 						<li class="nav-item">
-							<a class="nav-link scroll" href="#" data-toggle="modal"  aria-pressed="false" data-target="#loginModal">Sign</a>
+							<a class="nav-link scroll" href="<?=base_url()?>index.php/transaksi">Transaksi</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link scroll" href="<?=base_url()?>index.php/dashboard"><?php echo $this->session->userdata('username');?></a>
 						</li>
 					</ul>
 					<button type="button" class="btn btn-info btn-lg-block w3ls-btn px-4 text-uppercase font-weight-bold" data-toggle="modal"
@@ -144,9 +96,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 	</header>
 	<!-- //header -->
 	<!--services-->
-	<div class="agileits-services py-md-7 py-5" id="services">
+	<div class="agileits-services py-md-9 py-7" id="services">
 		<div class="container">
-			<h3 class="w3ls-title text-center text-capitalize pb-md-10 pb-8">List Harga Laundry Satuan</h3>
+
 			<br><br>
 			<div class="agileits-services-row row">
 
@@ -156,47 +108,132 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 
 						<div class="row header">
 							<div class="cell">
-								tanggal
+								Jenis Pakaian
 							</div>
 							<div class="cell">
-								jenis pakaian
+								Jumlah
 							</div>
 							<div class="cell">
-								jenis paket
-                            </div>
-                            <div class="cell">
-								harga
-                            </div>
-                            <div class="cell">
-								jumlah
-                            </div>
-                            <div class="cell">
-								total biaya
+								Jenis Paket
 							</div>
-                        </div>
-                    </div>
-						<div class="row">
-							<div class="cell" data-title="Full Name">
-								04/12/19
+							<div class="cell">
+								Tempat Laundry
 							</div>
-							<div class="cell" data-title="Age">
-								jeans
+							<div class="cell">
+								Driver
 							</div>
-							<div class="cell" data-title="Job Title">
-								express
-                            </div>
-                            <div class="cell" data-title="Job Title">
-								9000
-                            </div>
-                            <div class="cell" data-title="Job Title">
-								2
-                            </div>
-                            <div class="cell" data-title="Job Title">
-								18000
+							<div class="cell">
+								Total Harga
 							</div>
 						</div>
-                </div>
-    </div>
+
+						<div class="row">
+							<div class="cell" data-title="Age">
+								Jeans
+							</div>
+							<div class="cell" data-title="Full Name">
+								6
+							</div>
+							<div class="cell" data-title="Age">
+								Express
+							</div>
+							<div class="cell" data-title="Job Title">
+								Mafia Laundry
+							</div>
+							<div class="cell" data-title="Job Title">
+								Supri
+							</div>
+							<div class="cell" data-title="Job Title">
+								15000
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="cell" data-title="Age">
+								Jeans
+							</div>
+							<div class="cell" data-title="Full Name">
+								6
+							</div>
+							<div class="cell" data-title="Age">
+								Express
+							</div>
+							<div class="cell" data-title="Job Title">
+								Mafia Laundry
+							</div>
+							<div class="cell" data-title="Job Title">
+								Supri
+							</div>
+							<div class="cell" data-title="Job Title">
+								15000
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="cell" data-title="Age">
+								Jeans
+							</div>
+							<div class="cell" data-title="Full Name">
+								6
+							</div>
+							<div class="cell" data-title="Age">
+								Express
+							</div>
+							<div class="cell" data-title="Job Title">
+								Mafia Laundry
+							</div>
+							<div class="cell" data-title="Job Title">
+								Supri
+							</div>
+							<div class="cell" data-title="Job Title">
+								15000
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="cell" data-title="Age">
+								Jeans
+							</div>
+							<div class="cell" data-title="Full Name">
+								6
+							</div>
+							<div class="cell" data-title="Age">
+								Express
+							</div>
+							<div class="cell" data-title="Job Title">
+								Mafia Laundry
+							</div>
+							<div class="cell" data-title="Job Title">
+								Supri
+							</div>
+							<div class="cell" data-title="Job Title">
+								15000
+							</div>
+						</div>
+
+
+						<div class="row">
+							<div class="cell" data-title="Full Name">
+								Jeans
+							</div>
+							<div class="cell" data-title="Full Name">
+								6
+							</div>
+							<div class="cell" data-title="Age">
+								Express
+							</div>
+							<div class="cell" data-title="Job Title">
+								Mafia Laundry
+							</div>
+							<div class="cell" data-title="Job Title">
+								Supri
+							</div>
+							<div class="cell" data-title="Job Title">
+								15000
+							</div>
+						</div>
+
+
 
 			</div>
 		</div>
@@ -215,7 +252,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				<p class="text-light py-sm-4 py-2">Aliquam ac est vel nisl condimentum interdum vel eget enim. Curabitur mattis orci sed leo mattis, nec maximus nibh faucibus.
 					Mauris et justo vel nibh rhoncus venenatis. Nullal condimentum interdum vel eget enim. Curabitur mattis orci sed le.
 				</p>
-				<a href="#" class="text-uppercase serv_link align-self-center bg-light btn px-4">read more</a>
+				<a href="<?=base_url()?>index.php/about" class="text-uppercase serv_link align-self-center bg-light btn px-4">read more</a>
 			</div>
 		</div>
 	</section>
@@ -251,7 +288,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				<div class="fv3-contact mt-3">
 					<span class="fas fa-envelope-open mr-2"></span>
 					<p>
-						<a href="mailto:example@email.com" class="text-dark">info@example.com</a>
+						<a href="mailto:example@email.com" class="text-dark">laundryO@gmail.com</a>
 					</p>
 				</div>
 				<div class="fv3-contact">
@@ -261,7 +298,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<!-- copyright -->
 			<div class="cpy-right text-center pt-5">
-				<p>© 2018 Go Laundry. All rights reserved | Design by
+				<p>© Laundry-O. All rights reserved | Design by
 					<a href="http://w3layouts.com"> W3layouts.</a>
 				</p>
 			</div>
